@@ -1,0 +1,9 @@
+-Type Inference:
+	var email="abc@gmail.com": golang var email is default String
+- var a1, b1 = 10, 11
+-	var (
+		name string;
+		adress string;
+		age int;
+	)
+-rune: cap phat bo nho ngay tuc thi (runes := []rune(myString))
