@@ -7,3 +7,13 @@
 		age int;
 	)
 -rune: cap phat bo nho ngay tuc thi (runes := []rune(myString))
+- Map:
+    + is reference type
+-Struct:
+        //pointer with struct
+        pointer := &Student{
+            999,
+            "Phuc999",
+        }
+        fmt.Println((*pointer).name)
+        fmt.Println(pointer.id)
