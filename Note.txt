@@ -17,3 +17,6 @@
         }
         fmt.Println((*pointer).name)
         fmt.Println(pointer.id)
+-Pointer: var p1 = new(int)
+-Method:
+	+ Embed interface

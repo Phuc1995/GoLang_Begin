@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main()  {
-	//declare array
+	/*//declare array
 	var  myArray [4] int
 	fmt.Println(myArray)
 
@@ -57,5 +57,12 @@ func main()  {
 
 		}
 		fmt.Println()
-	}
+	}*/
+
+	var a1 [2]int
+	fmt.Printf("Type : %T", a1)
+	fmt.Println()
+
+	a3 := [3]int{0:4,2:5}
+	fmt.Println(a3)
 }
