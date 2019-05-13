@@ -3,10 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	name := "Phuc"
-	fmt.Println("Begin string: ", name)
-	fmt.Println("Reversed string: ")
-	for _, v := range [] rune(name){
+	xs := string("Hello World and Coders")
+	fmt.Println("Begin string: ", xs)
+	fmt.Print("Reversed string: ")
+	for _, v := range string(xs){
 		defer fmt.Printf("%c", v)
 	}
 }
