@@ -1,7 +1,6 @@
 package session2
 
 import (
-	"session2"
 	"fmt"
 )
 

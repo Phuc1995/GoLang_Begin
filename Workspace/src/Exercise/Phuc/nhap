@@ -1,0 +1,57 @@
+neededFuel := (m.FuelConsumption + m.FuelAirConditioner) * distance
+
+	fuleAvaiale := m.FuelAvaliable-neededFuel
+	//fmt.Println("Value of neededFuel: ", neededFuel)
+
+	if(m.FuelAvaliable > m.FuelCapacity){
+		overCapatity := m.FuelAvaliable-m.FuelCapacity
+		fmt.Println("Exceed fuel Capacity of Car is: ", overCapatity)
+	}else if neededFuel < m.FuelAvaliable{
+		var yes string
+
+		FuelAvaliableNow := m.FuelAvaliable-neededFuel
+		fmt.Printf("Fule availabe : %0.0f liters.",FuelAvaliableNow )
+		fmt.Println(" You can go ...................................")
+		fmt.Println()
+		fmt.Print("Do do you want to go continue? (y : yes, n: out)")
+		fmt.Scan(&yes)
+		if(yes=="n"){
+			status = 2
+		}else if(yes=="y") {
+			fmt.Println("***")
+			fuelAvaliableNow := m.FuelAvaliable-neededFuel
+			DistanceContinuce := Distance(FuelAvaliableNow,m.FuelConsumption,m.FuelAirConditioner)
+			m.VehiclesInfo()
+			fmt.Printf("The distance you can go far more is: %0.0f km", DistanceContinuce)
+
+			fmt.Println()
+			fmt.Println("***")
+			fmt.Printf("Iput distance you want to go to far more: ")
+			var DistanceGo float64
+			fmt.Scan(&DistanceGo)
+			fuleNeedToGo := FuleNeedToGo(DistanceGo, m.FuelConsumption, m.FuelAirConditioner)
+			status := 1
+		for{
+			if(status == 1){
+				fmt.Printf("Fule now: %0.0f liters \nFule need to go: %0.0f liters \n ",fuelAvaliableNow, fuleNeedToGo, )
+				fmt.Println("***")
+				fmt.Println()
+				var fuleAdd string
+				fmt.Println("Nhap")
+				fmt.Scan(&fuleAdd)
+			}else if(status==2){
+				fmt.Println("Loiiii")
+			}
+		}
+		}
+
+	}else if neededFuel > fuleAvaiale{
+		FuelAvaliableNow := m.FuelAvaliable-neededFuel
+		fmt.Printf("Fule availabe : %0.0f liters.",FuelAvaliableNow )
+		fmt.Println()
+		fmt.Println(" You can't go ...................................")
+		fmt.Println("You must add to fuler: ")
+		var fuelNew float64
+		fmt.Scan(&fuelNew)
+		m.VehiclesRefuel(fuelNew)
+		fmt.Printf("Fule availabe : %0.0f liters.",FuelAvaliableNow )

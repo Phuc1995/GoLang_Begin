@@ -20,6 +20,10 @@ func (m *Car) Refuel(fuel float64) {
 	m.FuelAmount += fuel
 }
 
+func (m *Car) DistnaceNew (float64) {
+	return
+}
+
 func (m *Car) Driving(distance float64) (status int) {
 	neededFuel := (m.FuelConsumption + m.FuelAirConditioning) * distance
 
