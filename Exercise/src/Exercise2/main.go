@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+
+
 )
 
-//Interface
 type Vehicles interface {
 	VehiclesInfo() string
 	VehiclesRefuel(float64)
@@ -62,7 +63,8 @@ func (m *Car) VehiclesDriving(distance float64)(status int) {
 }
 
 func main()  {
-	listVehicles := []Vehicles{
+	//Conver()
+	/*listVehicles := []Vehicles{
 		NewCar("ToYoTa",30, 1, 60, 0.9 ),
 	}
 
@@ -112,7 +114,7 @@ func main()  {
 			}
 		}
 	}
-
+*/
 
 
 
