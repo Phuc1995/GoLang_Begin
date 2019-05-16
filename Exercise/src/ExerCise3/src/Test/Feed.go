@@ -51,6 +51,11 @@ func (l *LinkedList ) Display( ){
 	}
 	fmt.Println()
 }
+
+func (l *LinkedList) Size() int {
+	return l.length
+}
+
 func main()  {
 	f := LinkedList{}
 	note1 := Note{value:"Mua"}
@@ -64,4 +69,5 @@ func main()  {
 	f.Append(&note4)
 	f.Append(&note5)
 	f.Display()
+	println("Size: ",f.Size())
 	}

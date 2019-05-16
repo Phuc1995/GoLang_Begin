@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be8b731f-34c3-4e6e-a5f5-81ceddfe05ad" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,20 +14,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/Test/LinkedList.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="32" selection-start-line="32" selection-end-line="39" selection-end-column="1" />
+                <state>
+                  <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/ABC/abc.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-51">
-                  <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="48" />
+                <state relative-caret-position="629">
+                  <caret line="115" column="34" lean-forward="true" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
                   <folding>
                     <element signature="e#14#31#0" expanded="true" />
                   </folding>
@@ -40,7 +39,7 @@
             <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="765">
-                  <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+                  <caret line="59" column="4" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
                 </state>
               </provider>
             </entry>
@@ -52,8 +51,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="243">
-                  <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+                <state relative-caret-position="277">
+                  <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
                 </state>
               </provider>
             </entry>
@@ -204,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build Feed.go">
+  <component name="RunManager" selected="Go Build.go build abc.go (1)">
     <configuration name="go build 3.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="Exercise2" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -247,8 +246,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build Feed.go" />
         <item itemvalue="Go Build.go build abc.go (1)" />
+        <item itemvalue="Go Build.go build Feed.go" />
         <item itemvalue="Go Build.go build LinkedList.go" />
         <item itemvalue="Go Build.go build abc.go" />
         <item itemvalue="Go Build.go build 3.go" />
@@ -335,13 +334,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go</url>
-          <line>61</line>
+          <line>66</line>
           <properties />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go</url>
-          <line>64</line>
+          <line>69</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
@@ -452,27 +451,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/Test/LinkedList.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/ABC/abc.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="15" column="48" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="48" />
+        <state relative-caret-position="629">
+          <caret line="115" column="34" lean-forward="true" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
           <folding>
             <element signature="e#14#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/Test/LinkedList.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="32" selection-start-line="32" selection-end-line="39" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ExerCise3/src/Test/Feed.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        <state relative-caret-position="277">
+          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
         </state>
       </provider>
     </entry>
