@@ -2,47 +2,66 @@ package main
 
 import "fmt"
 
-type Post struct {
-	body string
-	publishDate int64
-	next *Post
+type Note struct {
+	value string
+	next *Note
 }
 
-type Feed struct {
+type LinkedList struct {
 	length int
-	start *Post
+	start *Note
+	end *Note
 }
 
-func (f *Feed) Append(newPost *Post) {
-	if f.length == 0{
-		f.start = newPost
-	} else {
-		currentPost := f.start
-		for currentPost.next != nil{
-			currentPost = currentPost.next
-		}
-		currentPost.next = newPost
+func (f *LinkedList) Append(value *Note) {
+	if(f.length == 0){
+		f.start = value
+		f.end = value
+	}else {
+		lastPost := f.end
+		lastPost.next = value
+		f.end = value
 	}
 	f.length++
 }
 
-func main()  {
-	f := &Feed{}
-	p1 := Post{
-		body:"Lorem ipsum",
+/*func (f *LinkedList) Remove(publishDate int64)  {
+	if(f.length==0){
+		panic(errors.New("Feed is empty"))
 	}
-	f.Append(&p1)
-	fmt.Println(&p1)
-	fmt.Printf("Length: %v\n", f.length)
-	fmt.Printf("First: %v\n", f.start)
+	var previousPost *Note
+	currentPost := f.start
 
-	p2 := Post{
-		body: "Dolor sit amet",
+	for currentPost.publishDate != publishDate  {
+		if currentPost.next == nil {
+			panic(errors.New("No such Post found."))
+		}
+		previousPost = currentPost
+		currentPost = currentPost.next
+		}
+		previousPost.next = currentPost.next
+
+	f.length--
+}*/
+func (l *LinkedList ) Display( ){
+	list := l.start
+	for list != nil{
+		fmt.Printf("%v -", list.value)
+		list = list.next
 	}
-	f.Append(&p2)
-
-	fmt.Printf("Length: %v\n", f.length)
-	fmt.Printf("First: %v\n", f.start)
-	fmt.Printf("Second: %v\n", f.start.next)
-
+	fmt.Println()
 }
+func main()  {
+	f := LinkedList{}
+	note1 := Note{value:"Mua"}
+	note2 := Note{value:"Troi"}
+	note3 := Note{value:"Ca"}
+	note4 := Note{value:"Bau"}
+	note5 := Note{value:"Troi"}
+	f.Append(&note1)
+	f.Append(&note2)
+	f.Append(&note3)
+	f.Append(&note4)
+	f.Append(&note5)
+	f.Display()
+	}
