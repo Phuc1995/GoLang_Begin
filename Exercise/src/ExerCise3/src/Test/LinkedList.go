@@ -1,77 +1,133 @@
 package main
-/*
-import "fmt"
 
-type Node struct {
-	prev *Node
-	next *Node
-	name interface{}
+import (
+	"fmt"
+)
+
+type Note struct {
+	value string
+	next *Note
 }
 
-type List struct {
-	head *Node
-	tail *Node
+type LinkedList struct {
+	length int
+	start *Note
+	end *Note
 }
 
-func (L *List) Insert(key interface{}) {
-	list := &Node{
-		next : L.head,
-		name: key,
+func (f *LinkedList) Append(value *Note) {
+	if(f.length == 0){
+		f.start = value
+		f.end = value
+	}else {
+		lastPost := f.end
+		lastPost.next = value
+		f.end = value
 	}
-	if L.head != nil{
-		L.head.prev = list
-	}
-	L.head = list
-
-	l := L.head
-	for l.next != nil  {
-		l = l.next
-	}
-	L.tail = l
+	f.length++
 }
 
-func (l *List ) Display( ){
-	list := l.head
+
+
+func (l *LinkedList ) Display( ){
+	list := l.start
 	for list != nil{
-		fmt.Printf("%v <-", list.name)
+		fmt.Printf("%v -", list.value)
 		list = list.next
 	}
 	fmt.Println()
 }
-func Display(list *Node) {
-	for list != nil {
-		fmt.Printf("%v ->", list.name)
-		list = list.next
-	}
-	fmt.Println()
+
+func (l *LinkedList) Size() int {
+	return l.length
 }
-func (l *List)Reverse()  {
-	curr := l.head
-	var prev *Node
-	l.tail = l.head
-	for curr != nil {
-		next := curr.next
-		curr.next = prev
-		prev = curr
-		curr = next
+
+func (l *LinkedList) Get(index int) interface{} {
+	head := l.start
+	var listIndex int = 1
+	if(l.start == nil){
+		return "list emty"
+	}else {
+		for listIndex != index{
+			if head.next == nil{
+				return "Not find value"
+			}else {
+				head = head.next
+				listIndex ++
+			}
+		}
+		return head.value
 	}
-	l.head = prev
-	Display(l.head)
+}
+
+func (l *LinkedList) IndexOf(value interface{}) int {
+	head := l.start
+	var point int = 1
+	if (l == nil) {
+		return -1
+	} else {
+		for head.value != value {
+			if (head.next == nil) {
+				return -2
+			} else {
+				point++
+				head = head.next
+			}
+		}
+		return point
+	}
+}
+func (f *LinkedList) RemoveAt(index int)  {
+	previous := f.start
+	after := f.start
+
+	var listIndex int = 0
+	if(f.start == nil){
+		fmt.Println("list emty")
+	}else {
+		for listIndex !=index  {
+			if after.next == nil{
+				fmt.Printf("Out size value")
+			}else {
+				previous = after
+				after = after.next
+				listIndex++
+			}
+
+		}
+		previous.next = after.next
+	}
 }
 
 func main()  {
-	link := List{}
-	link.Insert(1)
-	link.Insert(2)
-	link.Insert(3)
-	link.Insert(4)
-	link.Insert(5)
+	f := LinkedList{}
+	note1 := Note{value:"Mua"}
+	note2 := Note{value:"Troi"}
+	note3 := Note{value:"Ca"}
+	note4 := Note{value:"Bau"}
+	note5 := Note{value:"Troi"}
+	f.Append(&note1)
+	f.Append(&note2)
+	f.Append(&note3)
+	f.Append(&note4)
+	f.Append(&note5)
 
-	fmt.Println("\n==============================\n")
-	fmt.Printf("Head: %v\n", link.head.name)
-	fmt.Printf("Tail: %v\n", link.tail.name)
-	link.Display()
-	link.Reverse()
+	f.Display()
+	println("Size: ",f.Size())
 
-}
-*/
+	fmt.Println("Value of Get() at 4: ",f.Get(4))
+	fmt.Printf("Inter value need to find IndexOf: ")
+	var n string
+	fmt.Scan(&n)
+	if(f.IndexOf(n) == -1){
+		println("Emty list")
+	}else if f.IndexOf(n) == -2 {
+		println("Not exist value in List")
+	}else {
+		println("Index of funtion IndexOf: ",f.IndexOf(n))
+	}
+	fmt.Println("After remove index 4")
+	f.RemoveAt(4)
+
+	f.Display()
+	}
