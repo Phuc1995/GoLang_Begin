@@ -116,7 +116,7 @@ func main() {
 	fmt.Println("size:", a.Size())
 	fmt.Println("size:", a.IndexOf("huu"))
 	fmt.Println("size:", a.IndexOf("oanh"))
-	fmt.Println("size:", a.Get(7))
+	fmt.Println("size:", a.Get(0))
 	a.RemoveAt(6)
 	a.Show()
 
