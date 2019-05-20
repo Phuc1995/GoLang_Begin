@@ -1,0 +1,132 @@
+How many types of inheritance are possible in C++?: 5
+Explanation: There are five types of inheritance that are possible in C++. Single level, Multilevel, multiple, hierarchical and hybrid. Here we count hybrid also because it sometimes can bring up a new form of inheritance, Like inheritance using multiple and hierarchical, which sometimes results in diamond problem.
+
+Class is pass by: Reference Classes are pass by reference, and the structures are pass by copy. It doesn’t depend on program.
+
+What is default access specifier for data members or member functions declared within a class without any specifier: Private
+
+Which is known as generic class?: Template class are known to be generic classes because those can be used for any data type value and the same class can be used for all the variables of different data types.
+
+Which class can have member functions without their implementation? Abstract class: Abstract classes can have member functions with no implementation, where the inheriting subclasses must implement those functions.
+
+Friend class:  A friend class can access all the private members of another class, of which it is friend. It is a special class provided to use when you need to reuse the data of a class but don’t want that class to have those special functions
+
+What is scope of a class nested inside another class?  It depends on the access specifier and the type of inheritance used with the class, because if the class is inherited then the nested class can be used by subclass too, provided it’s not of private type
+
+Which definition best describes an object? Instance of a class
+
+The object can’t be:Passed as function
+
+How members of an object are accessed? Using dot operator/period symbol
+
+If a local class is defined in a function, which of the following is true for an object of that class? Object can be used/accessed/declared locally in that function
+
+Abstract classes: 
+	+ can have constants, members, method stubs (methods without a body) and defined methods, whereas interfaces can only have constants and methods stubs.
+	+ Methods and members of an abstract class can be defined with any visibility, whereas all methods of an interface must be defined as public (they are defined public by default).
+	+ bstract class can extend another abstract class and abstract methods from the parent class don't have to be defined.
+	+ A child class can define abstract methods with the same or less restrictive visibility, whereas a class implementing an interface must define the methods with the exact same visibility (public)
+	+ Not support multiple inheritance
+	+ Extend
+
+Which feature of OOP indicates code reusability? Inheritance
+
+If a function can perform more than 1 type of tasks, where the function name remains same, which feature of OOP is used here? Polymorphism
+
+If different properties and functions of a real world entity is grouped or embedded into a single element, what is it called in OOP language? Encapsulation
+
+There are 7 basic features that define whether a programing language is pure OOP or not. The 4 basic features are inheritance, polymorphism, encapsulation and abstraction. Further, one is, object use is must, secondly, message passing and lastly, Dynamic binding
+
+___________ underlines the feature of Polymorphism in a class. Virtual Function
+
+Which feature in OOP is used to allocate additional function to a predefined operator in any language? 	Operator Overloading
+
+Exception handling is feature of OOP. (True/False) True
+
+------------Polymorphism:
+Which among the following best describes polymorphism? It is the ability for a message/data to be processed in more than one form
+	
+If same message is passed to objects of several different classes and all of those can respond in a different way, what is this feature called:? Polymorphism:
+
+Which type of function among the following shows polymorphism?	Which type of function among the following shows polymorphism? Virtual function
+
+Which among the following can show polymorphism? Overloading << 
+	+ Only insertion operator can be overloaded among all the given options. And the polymorphism can be illustrated here only if any of these is applicable of being overloaded. Overloading is type of polymorphism.
+	
+Which problem may arise if we use abstract class functions for polymorphism? All the derived classes must implement the undefined functions
+
+Which among the following is not true for polymorphism? Increases overhead of function definition always
+
+-------------Encapsulation
+Which among the following best describes encapsulation? It is a way of combining various data members and member functions that operate on those data members into a single unit
+
+If data members are private, what can we do to access them from the class object?Create public member functions to access those data members
+	+  We can define public member functions to access those private data members and get their value for use or alteration. They can’t be accessed directly but is possible to be access using member functions. This is done to ensure that the private data doesn’t get modified accidentally.
+
+While using encapsulation, which among the following is possible? Data member’s data type can be changed without changing any other code
+	+ Data member’s data type can be changed without changing any further code. All the members using that data can continue in the same way without any modification. Member functions can never change the data type of same class data members
+
+Which feature can be implemented using encapsulation? Abstraction
+	+  Data abstraction can be achieved by using encapsulation. We can hide the operation and structure of actual program from the user and can show only required information by the user
+
+Encapsulation helps in writing ___________ classes in java ? Immutable
+	+ Immutable classes are used for caching purpose generally. And it can be created by making the class as final and making all its members private.
+
+How can Encapsulation be achieved?:Using Access Specifiers
+	+ Using access specifiers we can achieve encapsulation. Using this we can in turn implement data abstraction. It’s not necessary that we only use private access.
+
+Which among the following violates the principle of encapsulation almost always?Global variablesx
+
+Which among the following would destroy the encapsulation mechanism if it was allowed in programming?	Using access declaration for private members of base class
+
+Which among the following can be a concept against encapsulation rules?Using any kind of pointer/array address in passing to another function
+	
+Encapsulation is the way to add functions in a user defined structure? false 
+
+Using encapsulation data security is Ensured to some extent
+
+----------------Abstraction
+Which among the following best defines abstraction? Hiding the implementation and showing only the features
+
+Hiding the implementation complexity can: Make the programming easy
+
+Class is _________ abstraction? Logical
+	+ Class is logical abstraction because it provides a logical structure for all of its objects. It gives an overview of the features of an object.
+
+Object is ________ abstraction? Real
+	+  Object is real abstraction because it actually contains those features of class. It is the implementation of overview given by class. Hence the class is logical abstraction and its object is real.
+
+Abstraction gives higher degree of ________? Idealized interface
+
+Abstraction principle includes___________? Use abstraction whenever possible to avoid duplication
+
+Encapsulation and abstraction differ as:Binding and Hiding respectively?
+
+Using higher degree of abstraction __________? Can be safer
+
+----------------Inheritance
+Which among the following best describes the Inheritance? Using the data and functions into derived segment
+
+How many basic types of inheritance are provided as OOP feature? 4 
+	+ There are basically 4 types of inheritance provided in OOP, namely, single level,multilevel, multiple and hierarchical inheritance
+
+Which among the following best defines single level inheritance?A class inheriting a derived class
+
+Which programming language doesn’t support multiple inheritance?Java
+
+Which among the following is correct for hierarchical inheritance? One base class can be derived into other two derived classes or more
+
+Which type of inheritance leads to diamond problem? Multiple
+
+Which access type data gets derived as private member in derived class:Private
+
+If a base class is inherited in protected access mode then which among the following is true? Public and Protected members of base class becomes protected members of derived class
+
+
+
+
+
+
+
+
+

@@ -1,48 +1,31 @@
-package main
+/*
+// Sample code to perform I/O:
 
-func main()  {
-/*	var (
-		name string;
-		adress string;
-		age int;
-	)
-	name = "phuc"
-	adress = "Dong Thap"
-	age  = 1;
-	fmt.Println(name)
-	fmt.Println(adress)
-	fmt.Println(age)*/
+fmt.Scanf("%s", &myname)            // Reading input from STDIN
+fmt.Println("Hello", myname)        // Writing output to STDOUT
 
-/*var myString string = "Phúc"
-
-	runes := []rune(myString)
-	for i:=0; i<len(runes); i++{
-		fmt.Printf("%c",runes[i])
-	}
+// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
 */
 
-//if statement; condition
-	/*if a:= 100; a == 100{
-		fmt.Print("aaa")
-	}*/
+// Write your code here
 
-//switch - case
-/*	number :=10
-	switch number {
-	case 1:
-		fmt.Print("num")
-		//tiep tuc work
-		fallthrough
-	case 2:
-		fmt.Print("num")
-	case 10:
-		if(number == 10){
-			goto handleNumberEqual10
+package main
+import (
+"fmt"
+
+)
+
+
+func main()  {
+	var numberTest int
+	fmt.Scan(&numberTest)
+	var count int
+
+	for {
+		if count>numberTest{
+
+			fmt.Scan(&numberTest)
+		}
+		count++
 	}
-		fmt.Print("num")
-		handleNumberEqual10:
-			fmt.Printf("handle for case :=10")
-	default:
-	}*/
-
 }

@@ -12,7 +12,8 @@ var wg sync.WaitGroup
 
 // Hàm này chạy trước khi các lệnh hàm main được thực thi
 func init()  {
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(time.Now().Unix())
+
 }
 
 //Ham mo ta mot nguoi choi quan vot
@@ -30,13 +31,15 @@ func player(name string, court chan int)  {
 
 		//lay mot gia tri ngau nhien 0-99
 		n := rand.Intn(100)
-		if n%13==0{
+		if n%13 == 0{
 			fmt.Printf("%s đánh hỏng ở lượt đánh thứ %d!\n", name, ball)
 
 			//Dong kenh khi danh hong
 			close(court)
+
 			return
 		}
+
 		fmt.Printf("Lượt đánh bóng thành công thứ %d: %s\n", ball, name)
 		ball++
 
@@ -54,5 +57,13 @@ func main()  {
 	wg.Add(2)
 
 	go player("Federer", court)
+	go player("Djokovic", court)
+	// Bắt đầu phát bóng cho một ván đấu
+	court<- 1
+	wg.Wait()   // Đợi ván đấu kết thúc
+	fmt.Println("Ván đấu kết thúc!")
+
+
+
 
 }
