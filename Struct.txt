@@ -1,0 +1,34 @@
+﻿- Greedy Algorithm -Giai thuat tham lam: Do đó chúng ta có thể kết luận rằng, giải thuật tham lam tìm kiếm giải pháp tôi ưu ở mỗi bước nhưng lại có thể thất bại trong việc tìm ra giải pháp tối ưu toàn cục.
+	+Bài toán hành trình người bán hàng-Giải thuật cây khung nhỏ nhất của Prim-Giải thuật cây khung nhỏ nhất của Kruskal-Giải thuật cây khung nhỏ nhất của Dijkstra-Bài toán xếp lịch công việc-Bài toán xếp ba lô
+
+-Giải thuật chia để trị (divide and conquer): chia bài toán thành các bài toán con nhỏ hơn
+	+ Hạn chế :Làm thế nào để chia tách bài toán một cách hợp lý thành các bài toán con, bởi vì nếu các bài toán con được giải quyết bằng các thuật toán khác nhau thì sẽ rất phức tạp.
+	+ Giải thuật sắp xếp trộn (Merge Sort)-Giải thuật sắp xếp nhanh (Quick Sort)-Giải thuật tìm kiếm nhị phân (Binary Search)
+
+-Giải thuật Qui hoạch động (Dynamic Programming):
+	+ Trong việc chia nhỏ bài toán thành các bài toán con nhỏ hơn và sau đó thành các bài toán con nhỏ hơn nữa có thể. Nhưng không giống chia để trị, các bài toán con này không được giải một cách độc lập. Thay vào đó, kết quả của các bài toán con này được lưu lại và được sử dụng cho các bài toán con tương tự hoặc các bài toán con gối nhau (Overlapping Sub-problems).
+
+-So sánh
+Giải thuật tham lam và giải thuật qui hoạch động:
+	+ Giải thuật tham lam (Greedy Algorithms) là giải thuật tìm kiếm, lựa chọn giải pháp tối ưu địa phương ở mỗi bước với hi vọng tìm được giải pháp tối ưu toàn cục.
+	+ Giải thuật Qui hoạch động tối ưu hóa các bài toán con gối nhau.
+
+Giải thuật chia để trị và giải thuật Qui hoạch động:
+	+ Giải thuật chia để trị (Divide and Conquer) là kết hợp lời giải của các bài toán con để tìm ra lời giải của bài toán ban đầu.
+	+ Giải thuật Qui hoạch động sử dụng kết quả của bài toán con và sau đó cố gắng tối ưu bài toán lớn hơn. Giải thuật Qui hoạch động sử dụng phương pháp lưu trữ (Memoization) để ghi nhớ kết quả của các bài toán con đã được giải.
+
+-Giải thuật Định lý thợ (Master Theorem) là gì:
+	+ Chúng ta sử dụng Định lý thợ (Master Theorem) để giải các công thức đệ quy dạng sau một cách hiệu quả :T(n) =aT(n/b) + c.n^k trong đó a>=1 , b>1
+
+-Array:
+	+ Mảng có thể lưu giữ một số phần tử cố định và các phần tử này nền có cùng kiểu. Hầu hết các cấu trúc dữ liệu đều sử dụng mảng để triển khai giải thuật
+	+ Phần tử: Mỗi mục được lưu giữ trong một mảng được gọi là một phần tử. Chỉ mục (Index): Mỗi vị trí của một phần tử trong một mảng có một chỉ mục số được sử dụng để nhận diện phần tử.
+Ưu điểm của mảng :
+	+ Truy câp phàn tử vơi thời gian hằng số O(1)
+	+ Sử dụng bộ nhớ hiệu quả
+	+ Tính cục bộ về bộ nhớ
+Nhược điểm:
+	+ Không thể thay đổi kích thước của mảng khi chương trình dang thực hiện
+Mảng động: Sử dụng mảng động ta bắt đầu với mảng có 1 phàn tử, khi số lượng phàn tử vượt qua khả năng của ảng thì ta gấp đôi kích thước mảng cuc và copy phàn tử mảng cũ vào nửa đầu của mảng mới
+	+ Ưu điểm : tránh lãng phí bộ nhớ khi phải khai báo mảng có kích thước lớn ngay từ đầu
+	+ Nhược điểm: + phải thực hiện them thao tác copy phần tử mỗi khi thay đổi kích thước. + một số thời gian thực hiện thao tác không còn là hằng số nữa
