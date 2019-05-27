@@ -2,3 +2,5 @@ http://www.golangprograms.com/golang/sort-reverse-search-functions/
 https://kipalog.com/posts/Golang-nhin-tu-goc-nhin-cua-huong-doi-tuong
 https://kainjan1.files.wordpress.com/2015/01/mcquniti.pdf
 https://www.sanfoundry.com/object-oriented-programming-questions-answers-encapsulation/
+
+https://github.com/PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Golang
