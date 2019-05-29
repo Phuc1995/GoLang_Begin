@@ -8,6 +8,14 @@ import (
 	"os"
 )
 
+func onMessage(conn net.Conn)  {
+	for  {
+		reader := bufio.NewReader(conn)
+		msg,_ := reader.ReadString('\n')
+		fmt.Println(msg)
+	}
+}
+
 func main()  {
 	connecton, err := net.Dial("tcp", "localhost:3000")
 	if err != nil {
@@ -19,6 +27,9 @@ func main()  {
 	nameInput, _ := nameReader.ReadString('\n')
 
 	nameInput = nameInput[:len(nameInput)-1]
+
+	go onMessage(connecton)
+
 	for {
 		msgReader := bufio.NewReader(os.Stdin)
 		msg, err := msgReader.ReadString('\n')
@@ -32,4 +43,5 @@ func main()  {
 
 	}
 	fmt.Println(nameInput)
+	connecton.Close()
 }

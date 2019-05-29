@@ -1,31 +1,47 @@
-/*
-// Sample code to perform I/O:
-
-fmt.Scanf("%s", &myname)            // Reading input from STDIN
-fmt.Println("Hello", myname)        // Writing output to STDOUT
-
-// Warning: Printing unwanted or ill-formatted data to output will cause the test cases to fail
-*/
-
-// Write your code here
-
 package main
-import (
-"fmt"
 
+import (
+	"bufio"
+	"fmt"
+	"log"
+	"net"
+	"os"
 )
 
+func onMessage(conn net.Conn)  {
+	for  {
+		reader := bufio.NewReader(conn)
+		msg,_ := reader.ReadString('\n')
+		fmt.Println(msg)
+	}
+}
 
 func main()  {
-	var numberTest int
-	fmt.Scan(&numberTest)
-	var count int
+	connecton, err := net.Dial("tcp", "localhost:3000")
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(connecton)
+
+	nameReader := bufio.NewReader(os.Stdin)
+	nameInput, _ := nameReader.ReadString('\n')
+
+	nameInput = nameInput[:len(nameInput)-1]
+
+	go onMessage(connecton)
 
 	for {
-		if count>numberTest{
+		msgReader := bufio.NewReader(os.Stdin)
+		msg, err := msgReader.ReadString('\n')
 
-			fmt.Scan(&numberTest)
+		if err != nil {
+			break
 		}
-		count++
+
+		msg = fmt.Sprintf("%s: %s\n",nameInput,msg[:len(msg)-1])
+		connecton.Write([]byte(msg))
+
 	}
+	fmt.Println(nameInput)
+	connecton.Close()
 }
