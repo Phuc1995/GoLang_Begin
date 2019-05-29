@@ -1,0 +1,15 @@
+Lists:
+	+ A list is a sequence of elements. Each element can be connected to another with a link in a forward or backward direction. 
+	+ The element can have other payload properties. This data structure is a basic type of container. 
+	+ Lists have a variable length and developer can remove or add elements more easily than an array. 
+	+ Data items within a list need not be contiguous in memory or on disk
+	
+Tuples:
+	+ A tuple is a finite sorted list of elements
+	+ 
+
+Heap:
+	+ The heap data structure is used in selection, graph, and k-way merge algorithms
+	+ Operations such as finding, merging, insertion, key changes, and deleting are performed on heaps
+	+ The value stored at each node is greater than or equal to its children.
+	+ 
