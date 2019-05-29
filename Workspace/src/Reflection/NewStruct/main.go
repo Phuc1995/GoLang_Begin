@@ -36,4 +36,17 @@ func main()  {
 	fmt.Println(sr.Elem().Field(0).Interface())
 	sr.Elem().Field(0).SetInt(20)
 	fmt.Println(sr.Elem().Field(0).Interface())
+
+	// getting and setting the string field
+	fmt.Println("=========================")
+	sr.Elem().Field(1).SetString("reflect me")
+	fmt.Println(sr.Elem().Field(1).Interface())
+
+	// getting and setting the []int field
+	fmt.Println(sr.Elem().Field(2).Interface())
+	v := []int {1,2,3}
+	rv := reflect.ValueOf(v)
+	fmt.Println(rv)
+	sr.Elem().Field(2).Set(rv)
+	fmt.Println(sr.Elem().Field(2).Interface())
 }
