@@ -23,13 +23,13 @@ func main()  {
 	go func() {
 		for {
 			conn, err := server.Accept()
+			fmt.Println("conn: ",conn)
 			if err != nil{
 				log.Fatal(err)
 			}
 			fmt.Println("new client")
 
 			conns = append(conns, conn)
-
 
 			connCh <- conn
 		}

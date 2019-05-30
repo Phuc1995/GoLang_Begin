@@ -23,11 +23,12 @@ func main()  {
 	}
 	fmt.Println(connecton)
 
+	fmt.Println("Your name:")
 	nameReader := bufio.NewReader(os.Stdin)
 	nameInput, _ := nameReader.ReadString('\n')
 
 	nameInput = nameInput[:len(nameInput)-1]
-
+	fmt.Println("********Mesage*********")
 	go onMessage(connecton)
 
 	for {
