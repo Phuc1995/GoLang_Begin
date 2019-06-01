@@ -1,19 +1,50 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
-func greet(c chan string)  {
-	fmt.Println("Hello: "+ <-c )
-}
-
-func main()  {
-	fmt.Println("Begin-----")
-	c := make(chan string)
-	//f := make(chan string)
-	//c <- "phuc"
-	go greet(c)
-
-	fmt.Println("end")
+func square(c chan int) {
+	fmt.Println("[square] reading")
+	num := <-c
+	c <- num * num
 
 }
 
+func cube(c chan int) {
+	fmt.Println("[cube] reading")
+	num := <-c
+	c <- num * num * num
+
+}
+
+func main() {
+	fmt.Println("[main] main() started")
+
+	squareChan := make(chan int)
+	cubeChan := make(chan int)
+
+	go square(squareChan)
+	go cube(cubeChan)
+
+	testNum := 3
+	fmt.Println("[main] sent testNum to squareChan")
+
+	squareChan <- testNum
+	fmt.Println(runtime.NumGoroutine())
+	fmt.Println("[main] resuming")
+	fmt.Println("[main] sent testNum to cubeChan")
+
+	cubeChan <- testNum
+	fmt.Println(runtime.NumGoroutine())
+	fmt.Println("[main] resuming")
+	fmt.Println("[main] reading from channels")
+
+	squareVal, cubeVal := <-squareChan, <-cubeChan
+	sum := squareVal + cubeVal
+
+	fmt.Println("[main] sum of square and cube of", testNum, " is", sum)
+	fmt.Println(runtime.NumGoroutine())
+	fmt.Println("[main] main() stopped")
+}

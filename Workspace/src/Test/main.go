@@ -1,20 +1,32 @@
 package main
 
-import "fmt"
-import "validator"
+import (
+	"fmt"
+	"sync"
+)
 
-/*option 2: import  StringConvert "Test/Helper" */
-import  "Test/Helper"
+var i int // i == 0
+
+// goroutine increment global variable i
+func worker(wg *sync.WaitGroup, m *sync.Mutex) {
+	m.Lock()
+	i = i + 1
+	m.Unlock()
+	wg.Done()
+}
 
 func main() {
+	var wg sync.WaitGroup
+	var m sync.Mutex
 
-	//setup $GOPATH
-	//go get github
-	fmt.Println("Hello")
-	/*option 2: StringConvert.ConvertStringToInt*/
-	Helper.ConvertStringToInt()
+	for i := 0; i < 1000; i++ {
+		wg.Add(1)
+		go worker(&wg, &m)
+	}
 
-	validator.CheckValiEmail()
-	validator.CheckValiPhone()
+	// wait until all 1000 gorutines are done
+	wg.Wait()
 
+	// value of i should be 1000
+	fmt.Println("value of i after 1000 operations is", i)
 }
