@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	_ "github.com/russross/blackfriday"
+)
 
 type Counter struct{
 	Count int
