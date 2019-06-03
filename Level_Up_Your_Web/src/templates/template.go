@@ -1,4 +1,4 @@
-package abc
+package templates
 
 import (
 	"fmt"
