@@ -1,18 +1,31 @@
 package main
 
-import "fmt"
+import (
+	"crypto/rand"
+	"fmt"
+)
+// Source String used when generating a random identifier.
+const idSource = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
-func input()(int, error)  {
-	var n int
-	fmt.Print("Nhap vao so khong am: ")
-	_, err := fmt.Scanf("%d", &n)
-	if err == nil && n<0{
-		return n, fmt.Errorf("Loi! %d la so am",n)
+// Save the length in a constant so we don't look it up each time.
+const idSourceLen = byte(len(idSource))
+func GenerateID(prefix string, length int) string {
+	// Create an array with the correct capacity
+	id := make([]byte, length)
+	// Fill our array with random numbers
+	rand.Read(id)
+
+	// Replace each random number with an alphanumeric value
+	for i, b := range id {
+		id[i] = idSource[b%idSourceLen]
+		fmt.Println("id: ",idSourceLen)
+		fmt.Println(b%idSourceLen)
 	}
-	return n,err
+
+	// Return the formatted id
+	return fmt.Sprintf("%s_%s", prefix, string(id))
 }
-
 func main() {
-	input()
-
+	u := GenerateID("A",6)
+	fmt.Println(u)
 }

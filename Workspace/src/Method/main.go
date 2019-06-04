@@ -1,36 +1,26 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
-	"image/color"
 )
 
+type Person struct {
+First string
+Last string
+}
 func main() {
-	r := Rect{5, 10}
-	fmt.Println("area: ", r.area())
-	fmt.Println("area: ", r.perim())
+/* This will marshal the JSON into []bytes */
 
-	red := color.RGBA{255,0,0,255}
-	c := ColorRect{Rect{length:10, width:5}, red}
-	c.width = c.width + 5
-	fmt.Println("area: ", c.area())
-	fmt.Println("area: ", c.perim())
+p1 := Person{"alice", "bob"}
+bs, _ := json.Marshal(p1)
+fmt.Println(string(bs))
 
-}
+/* This will unmarshal the JSON from []bytes */
 
-type Rect struct {
-	length, width int
-}
+var p2 Person
+bs = []byte(`{"First":"alice","Last":"bob"}`)
+json.Unmarshal(bs, &p2)
+fmt.Println(p2)
 
-func (r Rect) area() int  {
-	return r.length * r.width
-}
-
-func (r Rect) perim() int {
-	return (r.length + r.width)*2
-}
-
-type ColorRect struct {
-	Rect
-	color color.RGBA
 }

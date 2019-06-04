@@ -1,0 +1,12 @@
+﻿json.MarshalIndent(store, "","")
+
+//For the moment we’ll just be using permissions 0660 , which will allow a user—and anyone in the same group as the user―to read and write to the file.
+ioutil.WriteFile(store.filename, content, 0660)
+
+//{"First":"alice","Last":"bob"}
+p1 := Person{"alice", "bob"}
+bs, _ := json.Marshal(p1)
+
+//{alice bob}
+bs = []byte(`{"First":"alice","Last":"bob"}`)
+json.Unmarshal(bs, &p2)
