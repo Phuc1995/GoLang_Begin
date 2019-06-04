@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"handler"
 	"log"
@@ -13,6 +14,8 @@ func main()  {
 	router := NewRouter()
 
 	router.Handle("GET", "/", handler.HandleHome)
+	router.Handle("GET","/register", handler.HandlerUserNew)
+	router.Handle("POST", "/register", handler.HandleUserCreate)
 
 	router.ServeFiles(
 		"/assets/*filepath",
@@ -21,6 +24,9 @@ func main()  {
 
 	middleware := handler.Middleware{}
 	middleware.Add(router)
+
+
+	fmt.Println("Server running......")
 	log.Fatal(http.ListenAndServe(":3000", middleware))
 }
 
