@@ -14,3 +14,7 @@ https://github.com/PacktPublishing/Learn-Data-Structures-and-Algorithms-with-Gol
 
 //IO golang
 https://www.devdungeon.com/content/working-files-go
+
+https://www.pdfdrive.com/cracking-the-coding-interview-d52072841.html
+
+https://github.com/subfuzion/cracking-the-coding-interview-in-go

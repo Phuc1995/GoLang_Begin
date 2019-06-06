@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 	"time"
 )
@@ -31,7 +32,7 @@ func NewSession(w http.ResponseWriter) *Session {
 		Value: session.ID,
 		Expires: session.Expiry,
 	}
-
+	fmt.Println(cookie)
 	http.SetCookie(w, &cookie)
 	return session
 }
