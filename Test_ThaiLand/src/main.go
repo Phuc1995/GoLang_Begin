@@ -1,6 +1,10 @@
 package main
 
-import "unicode"
+import (
+	"fmt"
+	"time"
+	"unicode"
+)
 
 func Solution(A []int) int {
 	var fix_sum, cur_sum, res_temp, val_return int
@@ -27,4 +31,22 @@ func Solution(A []int) int {
 }
 func main()  {
 	unicode.IsSpace()
+}
+
+func Solution(str []string) int {
+	    max := 0
+	    time := make(map[string]int)
+	    for _, s := range str {
+		        d, h1, h2 := SplipStr(s)
+		        t := TimeMeeting(h1, h2)
+		        time[d] = t
+		    }
+	    fmt.Println(time)
+	    return max
+}
+func TimeMeeting(firstTime, endTime string) int {
+	    t1, _ := time.Parse("15:04", firstTime)
+	    t2, _ := time.Parse("15:04", endTime)
+	    t := int(t2.Sub(t1).Minutes())
+	    return t
 }
