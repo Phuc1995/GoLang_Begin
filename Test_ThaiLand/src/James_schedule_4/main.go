@@ -2,28 +2,15 @@ package main
 
 import (
 	"fmt"
+
 	"math"
-	"reflect"
 	"time"
 )
 
 func split(s []string) int {
-	sa := []string{"Sun 10:00-20:00",
-		"Fri 05:00-10:00",
-		"Fri 16:30-23:50",
-		"Sat 10:00-24:00",
-		"Sun 01:00-04:00",
-		"Sat 02:00-06:00",
-		"Tue 03:30-18:15",
-		"Tue 19:00-20:00",
-		"Wed 04:25-15:14",
-		"Wed 15:14-22:40",
-		"Thu 00:00-23:59",
-		"Mon 05:00-13:00",
-		"Mon 15:00-21:00"}
-	//mapvalue := make(map[string][]string)
+	arrayMax := []int{}
 	mang := []string{}
-	for _, v := range sa {
+	for _, v := range s {
 		day, firtTime, endTime := SplipStr(v)
 
 		mang = append(mang, day)
@@ -33,23 +20,123 @@ func split(s []string) int {
 	fmt.Println(mang)
 
 	lenMang := len(mang)
+	arrayDay := []string{}
+
 	for i := 2; i<lenMang; i=i+3{
 		end := mang[i]
-		conut := i+2
-		if conut > lenMang{
+		day := mang[i-2]
+		fmt.Println(day)
+		count := i+2
+		if count > lenMang{
 			break
 		}
 		start := mang[i+2]
+		arrayDay = append(arrayDay, day)
+		bool :=endWeek(arrayDay,day)
+		fmt.Println(endWeek(arrayDay,day))
 
-		fmt.Println(reflect.TypeOf(start))
+		if endWeek(arrayDay,day) {
+			arrayDay = nil
+			arrayDay=append(arrayDay,day)
+			}
+		fmt.Println(arrayDay,"-")
 
 		fmt.Println(end)
 		fmt.Println(start)
-		a:=TimeMeeting(end,start)
+		a:=TimeMeeting(day,end,start,bool)
+		arrayMax = append(arrayMax,a)
+		fmt.Println("Max: ",Max(arrayMax))
 		fmt.Println(a)
 		fmt.Println("***********************")
 	}
 	return 1
+}
+
+//return max minute
+func Max(arrayMax []int) int {
+	max := arrayMax[0]
+	for _,v := range arrayMax{
+		if v > max {
+			max = v // found another smaller value, replace previous value in max
+		}
+	}
+	return max
+}
+
+//result is true if this day is begin new Week
+func endWeek(array []string,day string) bool {
+	var istrue bool
+	istrue = false
+	if(day=="Sun"){
+		istrue = true
+		return istrue
+	}else if(day=="Mon"){
+		istrue = true
+		return istrue
+	}else if(day=="Tue") {
+		for _,v := range array {
+			if(v=="Mon" || v=="Tue"){
+				istrue = false
+				return istrue
+			}else {
+				istrue = true
+				return istrue
+			}
+		}
+	}else if(day=="Wed"){
+		for _,v := range array {
+			if(v=="Mon" || v=="Tue" || v == "Wed"){
+				istrue = false
+				return istrue
+			}else {
+				istrue = true
+				return istrue
+			}
+		}
+	}else if(day=="Wed"){
+		for _,v := range array {
+			if(v=="Mon" || v=="Tue" || v == "Wed"){
+				istrue = false
+				return istrue
+			}else {
+				istrue = true
+				return istrue
+			}
+		}
+	}else if(day=="Thu"){
+		for _,v := range array {
+			if(v=="Mon" || v=="Tue" || v == "Wed" || v == "Thu"){
+				istrue = false
+				return istrue
+			}else {
+				istrue = true
+				return istrue
+			}
+		}
+	}else if(day=="Fri"){
+		for _,v := range array {
+			if(v=="Mon" || v=="Tue" || v == "Wed" || v=="Thu" || v == "Fri"){
+				istrue = false
+				return istrue
+			}else {
+				istrue = true
+				return istrue
+			}
+		}
+	}else if(day=="Sat"){
+		for _,v := range array {
+			if(v=="Mon" || v=="Tue" || v == "Wed" || v=="Thu" || v == "Fri" || v == "Sat"){
+				istrue = false
+				return istrue
+			}else {
+				istrue = true
+				return istrue
+			}
+		}
+	}
+
+	return istrue
+
 }
 
 func solution(str []string) int  {
@@ -58,28 +145,52 @@ func solution(str []string) int  {
 	return 1
 }
 
-func TimeMeeting(firtTime, endTime string) int {
-	t1,_ := time.Parse("15:04", firtTime)
-	t2,_ := time.Parse("15:04", endTime)
-	t := int(t2.Sub(t1).Minutes())
-	if math.Signbit(float64(t)){
-		if(firtTime=="24:00"){
-			fmt.Println("errrrrrrrrrrrrrr")
-			
-		}else {
-			t3,_ := time.Parse("15:04", "23:59")
-			t13 := int(t3.Sub(t1).Minutes())
-			t13= t13 +1
-
-			t4, _ := time.Parse("15:04", "00:00")
-			t14 := int(t2.Sub(t4).Minutes())
-			fmt.Println("t14: ", t14)
-			t = t13 +t14
-			fmt.Println("t13: " ,t13)
+func TimeMeeting(day, end, start string, bool bool) int {
+	t := 0
+	if(bool){
+		if day == "Sun" {
+			t1,_ := time.Parse("15:04", end)
+			t2,_ := time.Parse("15:04", "23:59")
+			t := int(t2.Sub(t1).Minutes())
+			t=t+1
+			return t
 		}
+	}else {
+		t1,_ := time.Parse("15:04", end)
+		t2,_ := time.Parse("15:04", start)
+		t := int(t2.Sub(t1).Minutes())
+		switch day {
+		case "Sun":
+			t1,_ := time.Parse("15:04", end)
+			t2,_ := time.Parse("15:04", "23:59")
+			t := int(t2.Sub(t1).Minutes())
+			t=t+1
+			return t
+		default:
+			if math.Signbit(float64(t)){
+				if(end=="24:00"){
+					t1,_ := time.Parse("15:04", "00:01")
+					t2,_ := time.Parse("15:04", start)
+					t := int(t2.Sub(t1).Minutes())
+					t = t+1
+					return t
 
+				}else {
+					t3,_ := time.Parse("15:04", "23:59")
+					t13 := int(t3.Sub(t1).Minutes())
+					t13= t13 +1
+
+					t4, _ := time.Parse("15:04", "00:00")
+					t14 := int(t2.Sub(t4).Minutes())
+
+					t = t13 +t14
+				}
+			}
+		}
+		return t
 	}
 	return t
+
 }
 
 func SplipStr(str string) (day string, timeFirt string, timeEnd string){
@@ -98,8 +209,12 @@ func SplipStr(str string) (day string, timeFirt string, timeEnd string){
 }
 
 func main()  {
+	t1,_ := time.Parse("4:00", "4:00")
+	t2,_ := time.Parse("15:00", "24:00")
+	t := int(t2.Sub(t1).Minutes())
+	//t=t+1
 	//fmt.Println(TimeMeeting("10:00","16:30"))
-	//fmt.Println(TimeMeeting("23:50","10:00"))
+	fmt.Println("Sun: ",t)
 	sa := []string{"Sun 10:00-20:00",
 		"Fri 05:00-10:00",
 		"Fri 16:30-23:50",
