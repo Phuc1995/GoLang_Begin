@@ -15,13 +15,14 @@ func HandleUserCreate(w http.ResponseWriter, r * http.Request,_ httprouter.Param
 		r.FormValue("email"),
 		r.FormValue("password"),
 		)
-
+	//fmt.Print(err)
 	if err != nil {
 		if IsValidationError(err){
 			RenderTemplate(w, r,"users/new", map[string]interface{}{
 				"Error" : err.Error(),
 				"User" : user,
 			} )
+
 			return
 		}
 		panic(err)

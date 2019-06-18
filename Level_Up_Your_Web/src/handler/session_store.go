@@ -11,9 +11,9 @@ type FileSessionStore struct {
 	Session map[string]Session
 }
 
-func NewFileSessionStore(name string) (*FileSessionStore, error)  {
+/*func NewFileSessionStore(name string) (*FileSessionStore, error)  {
 	store := &FileSessionStore{
 		Session: map[string]Session{},
 		filename: name,
 	}
-}
+}*/

@@ -5,6 +5,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"handler"
 	"log"
+	"middlewaree"
 	"net/http"
 )
 
@@ -22,7 +23,7 @@ func main()  {
 		http.Dir("assets/"),
 	)
 
-	middleware := handler.Middleware{}
+	middleware := middlewaree.Middleware{}
 	middleware.Add(router)
 
 
@@ -36,3 +37,10 @@ func NewRouter() *httprouter.Router {
 	router.NotFound = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})
 	return router
 }
+
+/*var layout = template.Must(
+	template.
+		New("layout.html").
+		Funcs(layoutFuncs).
+		Parse(),
+)*/

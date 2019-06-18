@@ -32,21 +32,20 @@ func split(s []string) int {
 		}
 		start := mang[i+2]
 		arrayDay = append(arrayDay, day)
-		bool :=endWeek(arrayDay,day)
-		fmt.Println(endWeek(arrayDay,day))
+		bool :=newWeek(arrayDay,day)
+		fmt.Println("new week:",newWeek(arrayDay,day))
 
-		if endWeek(arrayDay,day) {
+		if newWeek(arrayDay,day) {
 			arrayDay = nil
 			arrayDay=append(arrayDay,day)
 			}
 		fmt.Println(arrayDay,"-")
-
 		fmt.Println(end)
 		fmt.Println(start)
 		a:=TimeMeeting(day,end,start,bool)
 		arrayMax = append(arrayMax,a)
 		fmt.Println("Max: ",Max(arrayMax))
-		fmt.Println(a)
+		fmt.Println("time: ",a)
 		fmt.Println("***********************")
 	}
 	return 1
@@ -64,7 +63,7 @@ func Max(arrayMax []int) int {
 }
 
 //result is true if this day is begin new Week
-func endWeek(array []string,day string) bool {
+func newWeek(array []string,day string) bool {
 	var istrue bool
 	istrue = false
 	if(day=="Sun"){

@@ -24,6 +24,7 @@ var globalUserStore UserStore
 
 func init()  {
 	store, err := NewFileUserStore("./data/users.json")
+	fmt.Println(store)
 	if err != nil {
 		panic(fmt.Errorf("Error creating user store: %s", err))
 	}

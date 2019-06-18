@@ -1,6 +1,9 @@
 package handler
 
-import "github.com/giantswarm/go.crypto/bcrypt"
+import (
+	"fmt"
+	"github.com/giantswarm/go.crypto/bcrypt"
+)
 
 type User struct {
 	ID             string
@@ -37,6 +40,7 @@ func NewUser(username, email, password string) (User, error) {
 
 	//Check if the username exists
 	existingUser, err := globalUserStore.FindByUsername(username)
+	fmt.Print("existingUser: ",existingUser)
 	if err != nil{
 		return user, err
 	}
