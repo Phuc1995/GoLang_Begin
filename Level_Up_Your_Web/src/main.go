@@ -5,6 +5,8 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"handler"
 	"log"
+
+	"middlerwaree"
 	"net/http"
 )
 
@@ -22,7 +24,7 @@ func main()  {
 		http.Dir("assets/"),
 	)
 
-	middleware := handler.Middleware{}
+	middleware := middlerwaree.Middleware{}
 	middleware.Add(router)
 
 

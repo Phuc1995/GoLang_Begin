@@ -1,5 +1,11 @@
 {
 "Users": {
+"usr_00cbqApK2MiCaEOA": {
+"ID": "usr_00cbqApK2MiCaEOA",
+"Email": "nhoangphuc@tma.com.vn",
+"HashedPassword": "$2a$10$/fDjobw2TfHZl444.Zm0AetT6PelW8YFyGoyw9NCVKNyfY/VQx/Xe",
+"Username": "Phuc111111111"
+},
 "usr_9OpuZyHExtK5769K": {
 "ID": "usr_9OpuZyHExtK5769K",
 "Email": "111",
@@ -17,6 +23,12 @@
 "Email": "1111111111",
 "HashedPassword": "$2a$10$pP/dIdOPAc/YqV2.MY47nOf8gm7Uj0Ql2gs4GUilyQFJtNnVxOjW.",
 "Username": "11111111"
+},
+"usr_HjZMHtiBLuxLCnuT": {
+"ID": "usr_HjZMHtiBLuxLCnuT",
+"Email": "sdasd",
+"HashedPassword": "$2a$10$dGunYioo2xZDwp2B.ofUKutdIh0zyUGPMvihq4Ofa1nA7VXPlAM9W",
+"Username": "hhhhhsds"
 },
 "usr_OiA1WPRrpTsHNXiN": {
 "ID": "usr_OiA1WPRrpTsHNXiN",
