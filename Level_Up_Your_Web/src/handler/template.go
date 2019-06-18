@@ -4,7 +4,9 @@ import (
 	"bytes"
 	"fmt"
 	"html/template"
+	"log"
 	"net/http"
+	"os"
 )
 
 var layoutFuncs = template.FuncMap{
@@ -12,6 +14,7 @@ var layoutFuncs = template.FuncMap{
 		return "", fmt.Errorf("yield called inappropriately")
 	},
 }
+<<<<<<< HEAD
 var layout = template.Must(
 	template.
 		New("layout.html").
@@ -21,6 +24,11 @@ var layout = template.Must(
 
 var templates = template.Must(template.New("t").ParseGlob("templates/**/*.html"))
 
+=======
+
+
+//var templates = template.Must(template.New("t").ParseGlob(wd+"templates/**/*.html"))
+>>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae
 var errorTemplate = `
 <html>
 	<body>
@@ -29,12 +37,22 @@ var errorTemplate = `
 	</body>
 </html>
 `
+<<<<<<< HEAD
 
 func RenderTemplate(w http.ResponseWriter, r *http.Request, name string, data map[string]interface{}) {
 	if data == nil {
 		data = map[string]interface{}{}
 	}
 
+=======
+func RenderTemplate(w http.ResponseWriter, request *http.Request, name string, data interface{})  {
+	wd, err1 := os.Getwd()
+	if err1 != nil {
+		log.Fatal(err1)
+	}
+	fmt.Println("wd:***********",wd)
+	var templates = template.Must(template.New("t").ParseGlob(wd  +"/templates/**/*.html"))
+>>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae
 	funcs := template.FuncMap{
 		"yield": func() (template.HTML, error) {
 			buf := bytes.NewBuffer(nil)
@@ -42,6 +60,16 @@ func RenderTemplate(w http.ResponseWriter, r *http.Request, name string, data ma
 			return template.HTML(buf.String()), err
 		},
 	}
+
+	// Template
+	//tpl, err1 := template.ParseFiles(wd + "/templates/index.html")
+
+	var layout = template.Must(
+		template.
+			New("layout.html").
+			Funcs(layoutFuncs).
+			ParseFiles(wd+ "/templates/layout.html"),
+	)
 
 	layoutClone, _ := layout.Clone()
 	layoutClone.Funcs(funcs)
