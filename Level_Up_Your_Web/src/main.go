@@ -5,12 +5,8 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"handler"
 	"log"
-<<<<<<< HEAD
 	"middlewaree"
-=======
 
-	"middlerwaree"
->>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae
 	"net/http"
 )
 
@@ -28,11 +24,10 @@ func main()  {
 		http.Dir("assets/"),
 	)
 
-<<<<<<< HEAD
+
+
 	middleware := middlewaree.Middleware{}
-=======
-	middleware := middlerwaree.Middleware{}
->>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae
+
 	middleware.Add(router)
 
 
@@ -47,9 +42,3 @@ func NewRouter() *httprouter.Router {
 	return router
 }
 
-/*var layout = template.Must(
-	template.
-		New("layout.html").
-		Funcs(layoutFuncs).
-		Parse(),
-)*/

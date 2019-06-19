@@ -1,8 +1,5 @@
-<<<<<<< HEAD:Level_Up_Your_Web/src/middlewaree/middlewaree.go
+
 package middlewaree
-=======
-package middlerwaree
->>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae:Level_Up_Your_Web/src/middlerwaree/middleware.go
 
 import "net/http"
 

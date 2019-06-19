@@ -14,21 +14,7 @@ var layoutFuncs = template.FuncMap{
 		return "", fmt.Errorf("yield called inappropriately")
 	},
 }
-<<<<<<< HEAD
-var layout = template.Must(
-	template.
-		New("layout.html").
-		Funcs(layoutFuncs).
-		ParseFiles("./templates/layout.html"),
-)
 
-var templates = template.Must(template.New("t").ParseGlob("templates/**/*.html"))
-
-=======
-
-
-//var templates = template.Must(template.New("t").ParseGlob(wd+"templates/**/*.html"))
->>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae
 var errorTemplate = `
 <html>
 	<body>
@@ -37,22 +23,17 @@ var errorTemplate = `
 	</body>
 </html>
 `
-<<<<<<< HEAD
 
-func RenderTemplate(w http.ResponseWriter, r *http.Request, name string, data map[string]interface{}) {
-	if data == nil {
-		data = map[string]interface{}{}
-	}
 
-=======
 func RenderTemplate(w http.ResponseWriter, request *http.Request, name string, data interface{})  {
 	wd, err1 := os.Getwd()
 	if err1 != nil {
 		log.Fatal(err1)
 	}
 	fmt.Println("wd:***********",wd)
-	var templates = template.Must(template.New("t").ParseGlob(wd  +"/templates/**/*.html"))
->>>>>>> a8c6af148516d9a83e29d78934d9f34a3a1501ae
+	//string1 := `\` + "templates" + `\` + "**" + `\` + "*.html"
+	var templates = template.Must(template.New("t").ParseGlob(wd +"/templates/**/*.html"))
+	//var templates = template.Must(template.New("t").ParseGlob(wd  + string1))
 	funcs := template.FuncMap{
 		"yield": func() (template.HTML, error) {
 			buf := bytes.NewBuffer(nil)
