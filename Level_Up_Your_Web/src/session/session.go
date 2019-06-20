@@ -1,10 +1,11 @@
 package session
 
 import (
-	"fmt"
-	"handler"
+	"generateId"
 	"net/http"
+	"net/url"
 	"time"
+	"user"
 )
 
 type Session struct {
@@ -24,16 +25,69 @@ func NewSession(w http.ResponseWriter) *Session {
 	expiry := time.Now().Add(SessionIDLength)
 
 	session := &Session{
-		ID:     handler.GenerateID("sess", SessionIDLength),
+		ID:     generateId.GenerateID("sess", SessionIDLength),
 		Expiry: expiry,
 	}
 
 	cookie := http.Cookie{
 		Name: SessionCookieName,
 		Value: session.ID,
-		Expires: session.Expiry,
+		Expires: expiry,
 	}
-	fmt.Println(cookie)
+
 	http.SetCookie(w, &cookie)
 	return session
+}
+
+func RequestSession(r *http.Request) *Session {
+	cookie, err := r.Cookie(SessionCookieName)
+
+	if err != nil{
+		return nil
+	}
+
+	session, err := GlobalSessionStore.Find(cookie.Value)
+	if err != nil{
+		panic(err)
+	}
+
+	if session == nil{
+		return nil
+	}
+
+	if session.Expired() {
+		GlobalSessionStore.Delete(session)
+		return nil
+	}
+	return session
+}
+
+func (session *Session) Expired() bool {
+	return session.Expiry.Before(time.Now())
+}
+
+func RequestUser(r *http.Request) *user.User {
+	session := RequestSession(r)
+	if session == nil || session.UserID == ""{
+		return nil
+	}
+
+	user, err := user.GlobalUserStore.Find(session.UserID)
+
+	if  err != nil{
+		panic(err)
+	}
+	return user
+}
+
+func RequireLogin(w http.ResponseWriter, r *http.Request)  {
+	// Let the request pass if we've got a user
+	if RequestUser(r) != nil{
+		return
+	}
+
+	query := url.Values{}
+	query.Add("next", url.QueryEscape(r.URL.String()))
+
+	http.Redirect(w, r, "/login?"+ query.Encode(), http.StatusFound)
 }

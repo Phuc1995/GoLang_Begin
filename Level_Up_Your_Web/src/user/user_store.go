@@ -1,4 +1,4 @@
-package handler
+package user
 
 import (
 	"encoding/json"
@@ -20,7 +20,7 @@ type FileUserStore struct {
 	Users map[string]User
 }
 
-var globalUserStore UserStore
+var GlobalUserStore UserStore
 
 func init()  {
 	store, err := NewFileUserStore("./data/users.json")
@@ -28,7 +28,7 @@ func init()  {
 	if err != nil {
 		panic(fmt.Errorf("Error creating user store: %s", err))
 	}
-	globalUserStore = store
+	GlobalUserStore = store
 }
 
 func NewFileUserStore(filename string) (*FileUserStore, error)  {
