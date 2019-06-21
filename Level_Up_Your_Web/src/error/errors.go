@@ -11,6 +11,7 @@ var(
 	ErrPasswordTooShort = ValidationError(errors.New("Your password is too short"))
 	ErrUsernameExists   = ValidationError(errors.New("That username is taken"))
 	ErrEmailExists      = ValidationError(errors.New("That email address has an account"))
+	ErrCredentialsIncorrect = ValidationError(errors.New("We couldn't find a user with the supplied and pass word combination"))
 	)
 
 func IsValidationError(err error) bool {

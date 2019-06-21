@@ -63,3 +63,12 @@ func NewUser(username, email, password string) (User, error) {
 	user.ID = generateId.GenerateID("usr", userIDLength)
 	return user, err
 }
+
+func FindUser(username, password string) (*User, error) {
+	out := &User{
+		Username: username,
+	}
+
+	exist
+}
+

@@ -24,12 +24,8 @@ func main()  {
 		http.Dir("assets/"),
 	)
 
-
-
 	middleware := middlewaree.Middleware{}
-
 	middleware.Add(router)
-
 
 	fmt.Println("Server running......")
 	log.Fatal(http.ListenAndServe(":3000", middleware))
