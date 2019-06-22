@@ -22,7 +22,7 @@ const(
 )
 
 func NewSession(w http.ResponseWriter) *Session {
-	expiry := time.Now().Add(SessionIDLength)
+	expiry := time.Now().Add(SessionLength)
 
 	session := &Session{
 		ID:     generateId.GenerateID("sess", SessionIDLength),
@@ -32,7 +32,7 @@ func NewSession(w http.ResponseWriter) *Session {
 	cookie := http.Cookie{
 		Name: SessionCookieName,
 		Value: session.ID,
-		Expires: expiry,
+		Expires: session.Expiry,
 	}
 
 	http.SetCookie(w, &cookie)
@@ -40,6 +40,7 @@ func NewSession(w http.ResponseWriter) *Session {
 }
 
 func RequestSession(r *http.Request) *Session {
+	//fmt.Println("sesion_requestsession: ",Session{})
 	cookie, err := r.Cookie(SessionCookieName)
 
 	if err != nil{
@@ -97,6 +98,5 @@ func FindOrCreateSession(w http.ResponseWriter, r *http.Request) *Session {
 	if session == nil {
 		session = NewSession(w)
 	}
-
 	return session
 }

@@ -67,7 +67,7 @@ func (store *FileSessionStore) Save(session *Session) error {
 	if err != nil{
 		return err
 	}
-
+	fmt.Println("session_store_Save: ",session.Expiry)
 	return ioutil.WriteFile(store.filename, contents, 0660)
 }
 

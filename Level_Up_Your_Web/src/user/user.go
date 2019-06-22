@@ -69,6 +69,21 @@ func FindUser(username, password string) (*User, error) {
 		Username: username,
 	}
 
-	exist
+	existingUser, err := GlobalUserStore.FindByUsername(username)
+	if err != nil{
+		return out, err
+	}
+
+	if existingUser == nil{
+		return out, error2.ErrCredentialsIncorrect
+	}
+
+	if bcrypt.CompareHashAndPassword(
+		[]byte(existingUser.HashedPassword),
+		[]byte(password),) != nil{
+			return out, error2.ErrCredentialsIncorrect
+	}
+
+	return existingUser, nil
 }
 

@@ -39,10 +39,9 @@ func RenderTemplate(w http.ResponseWriter, r *http.Request, name string, data ma
 	if err1 != nil {
 		log.Fatal(err1)
 	}
-	fmt.Println("wd:***********",wd)
-	//string1 := `\` + "templates" + `\` + "**" + `\` + "*.html"
+
 	var templates = template.Must(template.New("t").ParseGlob(wd +"/templates/**/*.html"))
-	//var templates = template.Must(template.New("t").ParseGlob(wd  + string1))
+
 	funcs := template.FuncMap{
 		"yield": func() (template.HTML, error) {
 			buf := bytes.NewBuffer(nil)

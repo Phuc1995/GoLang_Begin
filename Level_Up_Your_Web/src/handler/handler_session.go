@@ -1,14 +1,14 @@
 package handler
 
 import (
-	error "error"
+	"error"
 	"github.com/julienschmidt/httprouter"
 	"net/http"
 	s "session"
 	u "user"
 )
 
-func HandleSessionDestroy(w http.ResponseWriter, r *http.Request) {
+func HandleSessionDestroy(w http.ResponseWriter, r *http.Request,  _ httprouter.Params) {
 	session := s.RequestSession(r)
 	if session != nil {
 		err := s.GlobalSessionStore.Delete(session)
@@ -16,9 +16,10 @@ func HandleSessionDestroy(w http.ResponseWriter, r *http.Request) {
 			panic(err)
 		}
 	}
+	RenderTemplate(w, r, "sessions/destroy", nil)
 }
 
-func HandleSessionNew(w http.ResponseWriter, r *http.Request) {
+func HandleSessionNew(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	next := r.URL.Query().Get("next")
 	RenderTemplate(w, r, "session/new",
 		map[string]interface{}{
@@ -46,6 +47,15 @@ func HandleSessionCreate(w http.ResponseWriter, r *http.Request, _ httprouter.Pa
 		panic(err)
 	}
 
-	session := FindOrCreateSession(w,r)
-
+	session := s.FindOrCreateSession(w,r)
+	//fmt.Println(session)
+	session.UserID = user.ID
+	err = s.GlobalSessionStore.Save(session)
+	if err != nil{
+		panic(err)
+	}
+	if next == ""{
+		next = "/"
+	}
+	http.Redirect(w,r,next+"?flash=Signed+in", http.StatusFound)
 }

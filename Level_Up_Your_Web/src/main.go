@@ -6,6 +6,7 @@ import (
 	"handler"
 	"log"
 	"middlewaree"
+	"session"
 
 	"net/http"
 )
@@ -18,14 +19,21 @@ func main()  {
 	router.Handle("GET", "/", handler.HandleHome)
 	router.Handle("GET","/register", handler.HandlerUserNew)
 	router.Handle("POST", "/register", handler.HandleUserCreate)
+	router.Handle("GET", "/login", handler.HandleSessionNew)
+	router.Handle("POST", "/login", handler.HandleSessionCreate)
 
 	router.ServeFiles(
 		"/assets/*filepath",
 		http.Dir("assets/"),
 	)
 
+	secureRouter := NewRouter()
+	secureRouter.Handle("GET", "/sign-out",handler.HandleSessionDestroy)
+
 	middleware := middlewaree.Middleware{}
 	middleware.Add(router)
+	middleware.Add(http.HandlerFunc(session.RequireLogin))
+	middleware.Add(secureRouter)
 
 	fmt.Println("Server running......")
 	log.Fatal(http.ListenAndServe(":3000", middleware))
