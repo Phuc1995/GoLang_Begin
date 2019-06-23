@@ -1,64 +1,16 @@
 {
 "Users": {
-"usr_3BWM7F2A5l88JvNv": {
-"ID": "usr_3BWM7F2A5l88JvNv",
-"Email": "gfdgfdgfdgf",
-"HashedPassword": "$2a$10$iN2/Q6vMAfhNJOIgJ4jBiePCAcmTwnJ2wZ2tjJ/3FbRxdgZI8bXoG",
-"Username": "gfdgfdgfdgf"
+"usr_iTP141qfI720W9AL": {
+"ID": "usr_iTP141qfI720W9AL",
+"Email": "phuc@gmail.com",
+"HashedPassword": "$2a$10$suxh7TAendOrTQaCTveKU.ymdZNqH5nWlO8XsosGOgl.SmJCAUr.W",
+"Username": "Phuc"
 },
-"usr_G0dKfL74D5vNJ8Rq": {
-"ID": "usr_G0dKfL74D5vNJ8Rq",
-"Email": "ggggggggggggggggggg",
-"HashedPassword": "$2a$10$NeYU4vwHOuCXU.ymeb0Yfu9X0dl/Jd/PL7U8BlZPzrb0Ss4LoHFkO",
-"Username": "ggggggggggggggg"
-},
-"usr_Rin6vJGlZ9S690uH": {
-"ID": "usr_Rin6vJGlZ9S690uH",
-"Email": "hhhhhhhhhhhhhhh",
-"HashedPassword": "$2a$10$PdSliWBBU0Uqlj.08kEvB.WVlnYh7mdMgP3b20sp0W8db27q70kYK",
-"Username": "hhhhhhhhhhhhh"
-},
-"usr_TMFK7iDrasy3zrgI": {
-"ID": "usr_TMFK7iDrasy3zrgI",
-"Email": "rerere",
-"HashedPassword": "$2a$10$0lscQOBA6cG3cOuRaL19ZuILQt3E.AvRFAbYgYrAZCUMvdA6If0ye",
-"Username": "rerer"
-},
-"usr_TMyinxobhMDeYYFJ": {
-"ID": "usr_TMyinxobhMDeYYFJ",
-"Email": "wqeqweqw",
-"HashedPassword": "$2a$10$irtEsoRPriFRdCJkAgd29OT0KnhNJlDOdWVSycBG6./YfXcC.hvGK",
-"Username": "ddwqe"
-},
-"usr_Wyrw1YwrdT8lE4I8": {
-"ID": "usr_Wyrw1YwrdT8lE4I8",
-"Email": "hghghghghg",
-"HashedPassword": "$2a$10$x3HFWRHTWr1Sh46CogjgaeO1Vj9wLl3VCvV4E9yDoWf/U1vOzBl9O",
-"Username": "hhhhhtretret"
-},
-"usr_cdG5U0oNN7DtUaxf": {
-"ID": "usr_cdG5U0oNN7DtUaxf",
-"Email": "hgghghyghhgh",
-"HashedPassword": "$2a$10$WY1gSijyzacVz05ueyep5O5BSNsA1ftq76mFzg3NjPWg2PDVCg1F.",
-"Username": "hhhhhhghgh"
-},
-"usr_nKtxNyCI3rjDYH6R": {
-"ID": "usr_nKtxNyCI3rjDYH6R",
-"Email": "phuc",
-"HashedPassword": "$2a$10$ZApBkzs7ytc6H4u32F29nuhNnlV5W2x0AWz2HfuPKI00NvDeOSB/u",
-"Username": "phuc"
-},
-"usr_sjRBCFRXbQPbqMUB": {
-"ID": "usr_sjRBCFRXbQPbqMUB",
-"Email": "abcd@1234",
-"HashedPassword": "$2a$10$HX/jra91/V0wMp42HxRbxONNYJs4aJQmQh76Ee4itOZhbIiqaA02C",
-"Username": "Phuc1"
-},
-"usr_t15LyVD58S9HfrcJ": {
-"ID": "usr_t15LyVD58S9HfrcJ",
-"Email": "rểwrewrewrew",
-"HashedPassword": "$2a$10$VN8dt905s9927Tia6hYIm.4pPJe54l9g3YRL/moN0fRfr3vc7Ge6.",
-"Username": "hhhhh"
+"usr_vNNJtmZoDnKepo7U": {
+"ID": "usr_vNNJtmZoDnKepo7U",
+"Email": "eeqweqwewqeqweqw",
+"HashedPassword": "$2a$10$ks1PcG7PDwCRy49ICoo9r.2N7OZfDTRyU7rEuwG9v1Ip./uzpHXtW",
+"Username": "Phuceqwe"
 }
 }
 }

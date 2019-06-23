@@ -82,7 +82,7 @@ func RequestUser(r *http.Request) *user.User {
 }
 
 func RequireLogin(w http.ResponseWriter, r *http.Request)  {
-	// Let the request pass if we've got a user
+	// Let the request pass if we've got a users
 	if RequestUser(r) != nil{
 		return
 	}

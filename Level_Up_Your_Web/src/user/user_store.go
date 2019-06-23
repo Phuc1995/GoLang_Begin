@@ -26,7 +26,7 @@ func init()  {
 	store, err := NewFileUserStore("./data/users.json")
 	fmt.Println(store)
 	if err != nil {
-		panic(fmt.Errorf("Error creating user store: %s", err))
+		panic(fmt.Errorf("Error creating users store: %s", err))
 	}
 	GlobalUserStore = store
 }
@@ -61,7 +61,7 @@ func (store FileUserStore) Save(user User) error  {
 	if err != nil{
 		return err
 	}
-	//For the moment we’ll just be using permissions 0660 , which will allow a user—and anyone in the same group as the user―to read and write to the file.For the moment we’ll just be using permissions 0660 , which will allow a user—and anyone in the same group as the user―to read and write to the file.
+	//For the moment we’ll just be using permissions 0660 , which will allow a users—and anyone in the same group as the users―to read and write to the file.For the moment we’ll just be using permissions 0660 , which will allow a users—and anyone in the same group as the users―to read and write to the file.
 	return ioutil.WriteFile(store.filename, content, 0660)
 }
 
