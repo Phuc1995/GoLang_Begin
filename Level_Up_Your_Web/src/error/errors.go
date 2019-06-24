@@ -14,6 +14,11 @@ var(
 	ErrCredentialsIncorrect = ValidationError(errors.New("We couldn't find a users with the supplied and pass word combination"))
 	ErrPasswordIncorrect = ValidationError(errors.New("Password did not match"))
 	ErrPasswordNotEmpty = ValidationError(errors.New("Password must not empty"))
+
+	// Image Manipulation Errors
+	ErrInvalidImageType = ValidationError(errors.New("Please upload only jpeg, gif or png images"))
+	ErrNoImage          = ValidationError(errors.New("Please select an image to upload"))
+	ErrImageURLInvalid  = ValidationError(errors.New("Couldn't download image from the URL you provided"))
 	)
 
 func IsValidationError(err error) bool {

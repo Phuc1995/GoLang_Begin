@@ -2,7 +2,6 @@ package user
 
 import (
 	error2 "error"
-	"fmt"
 	"generateId"
 	"github.com/giantswarm/go.crypto/bcrypt"
 )
@@ -42,7 +41,7 @@ func NewUser(username, email, password string) (User, error) {
 
 	//Check if the username exists
 	existingUser, err := GlobalUserStore.FindByUsername(username)
-	fmt.Print("existingUser: ",existingUser)
+
 	if err != nil{
 		return user, err
 	}

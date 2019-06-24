@@ -4,20 +4,47 @@ import (
 	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"handler"
+	"images"
 	"log"
 	"middlewaree"
-	"session"
-
+	"mysql"
 	"net/http"
+	"session"
+	"user"
 )
 
-type NotFound struct{}
+func init() {
+	//Assign a user store
+	store, err := user.NewFileUserStore("./data/users.json")
+	fmt.Println(store)
+	if err != nil {
+		panic(fmt.Errorf("Error creating users store: %s", err))
+	}
+	user.GlobalUserStore = store
 
-func main()  {
+	//Assign a session store
+	sessionStore, err := session.NewFileSessionStore("./data/sessions.json")
+	if err != nil {
+		panic(fmt.Errorf("Error creating session store: %s", err))
+	}
+	session.GlobalSessionStore = sessionStore
+
+	//Assign a sql database
+	db, err := mysql.NewMySQLDB("root:1234@tcp(127.0.0.1:3306)/gophr")
+	if err != nil {
+		panic(err)
+	}
+	mysql.GlobalMYSQLDB = db
+
+	//Assign a image store
+	images.GlobalImageStore = images.NewDBImageStore()
+}
+
+func main() {
 	router := NewRouter()
 
 	router.Handle("GET", "/", handler.HandleHome)
-	router.Handle("GET","/register", handler.HandlerUserNew)
+	router.Handle("GET", "/register", handler.HandlerUserNew)
 	router.Handle("POST", "/register", handler.HandleUserCreate)
 	router.Handle("GET", "/login", handler.HandleSessionNew)
 	router.Handle("POST", "/login", handler.HandleSessionCreate)
@@ -28,9 +55,11 @@ func main()  {
 	)
 
 	secureRouter := NewRouter()
-	secureRouter.Handle("GET", "/sign-out",handler.HandleSessionDestroy)
+	secureRouter.Handle("GET", "/sign-out", handler.HandleSessionDestroy)
 	secureRouter.Handle("GET", "/account", handler.HandleUserEdit)
 	secureRouter.Handle("POST", "/account", handler.HandleUserUpdate)
+	secureRouter.Handle("GET", "/images/new", handler.HandleImageNew)
+	secureRouter.Handle("POST", "/images/new", handler.HandleImageCreate)
 
 	middleware := middlewaree.Middleware{}
 	middleware.Add(router)
@@ -47,4 +76,3 @@ func NewRouter() *httprouter.Router {
 	router.NotFound = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})
 	return router
 }
-

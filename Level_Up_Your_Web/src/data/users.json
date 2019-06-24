@@ -1,5 +1,17 @@
 {
 "Users": {
+"usr_T57u8hAnA6VoDav9": {
+"ID": "usr_T57u8hAnA6VoDav9",
+"Email": "khoimy@gmail.com",
+"HashedPassword": "$2a$10$9BraJSXhHaMIOHYe/Ba9M.l3dzcDgt0Z1y6ROi0iR3Yw.iLXVHXgC",
+"Username": "KhoiMy"
+},
+"usr_eK3WySMuRic7tUDe": {
+"ID": "usr_eK3WySMuRic7tUDe",
+"Email": "mytam@gmail.com",
+"HashedPassword": "$2a$10$rMnHICXfXJ/ypKBorMatUOeZvyzqVLaIv3oQyPqIlaADM4AD6Pe6S",
+"Username": "MyTam"
+},
 "usr_iTP141qfI720W9AL": {
 "ID": "usr_iTP141qfI720W9AL",
 "Email": "phuc@gmail.com",

@@ -5,6 +5,7 @@
     <mapping directory="$PROJECT_DIR$/src/github.com/acroca/go-symbols" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/giantswarm/go.crypto" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/go-delve/delve" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/julienschmidt/httprouter" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/karrick/godirwalk" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/mdempsky/gocode" vcs="Git" />
