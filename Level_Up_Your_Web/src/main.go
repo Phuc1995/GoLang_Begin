@@ -48,10 +48,16 @@ func main() {
 	router.Handle("POST", "/register", handler.HandleUserCreate)
 	router.Handle("GET", "/login", handler.HandleSessionNew)
 	router.Handle("POST", "/login", handler.HandleSessionCreate)
+	router.Handle("GET", "/image/:imageID", handler.HandleImageShow)
+	router.Handle("GET", "/user/:userID", handler.HandleUserShow)
 
 	router.ServeFiles(
 		"/assets/*filepath",
 		http.Dir("assets/"),
+	)
+	router.ServeFiles(
+		"/im/*filepath",
+		http.Dir("data/images/"),
 	)
 
 	secureRouter := NewRouter()

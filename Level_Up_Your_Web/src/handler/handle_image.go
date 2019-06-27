@@ -2,10 +2,12 @@ package handler
 
 import (
 	"error"
+	"fmt"
 	"github.com/julienschmidt/httprouter"
 	"images"
 	"net/http"
 	"session"
+	"user"
 )
 
 func HandleImageNew(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
@@ -76,4 +78,33 @@ func HandleImageCreateFromFile(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	http.Redirect(w, r, "/?flash=Image+Uploaded+Successfully", http.StatusFound)
+}
+
+func HandleImageShow(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+	image, err := images.GlobalImageStore.Find(params.ByName("imageID"))
+	if err != nil {
+		panic(err)
+	}
+
+	// 404
+	if image == nil {
+		http.NotFound(w, r)
+		return
+	}
+
+	user, err := user.GlobalUserStore.Find(image.UserID)
+	if err != nil {
+		panic(err)
+	}
+
+	if user == nil {
+		panic(fmt.Errorf("Could not find user %s", image.UserID))
+	}
+	fmt.Println(image.StaticRoute())
+	fmt.Println(image.Description)
+	fmt.Println(user.ImagesRoute())
+	RenderTemplate(w, r, "images/show", map[string]interface{}{
+		"Image": image,
+		"User":  user,
+	})
 }

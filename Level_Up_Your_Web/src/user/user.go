@@ -1,7 +1,9 @@
 package user
 
 import (
+	"crypto/md5"
 	error2 "error"
+	"fmt"
 	"generateId"
 	"github.com/giantswarm/go.crypto/bcrypt"
 )
@@ -11,6 +13,16 @@ type User struct {
 	Email          string
 	HashedPassword string
 	Username       string
+}
+func (user *User) AvatarURL() string {
+	return fmt.Sprintf(
+		"//www.gravatar.com/avatar/%x",
+		md5.Sum([]byte(user.Email)),
+	)
+}
+
+func (user *User) ImagesRoute() string {
+	return "/user/" + user.ID
 }
 
 const (

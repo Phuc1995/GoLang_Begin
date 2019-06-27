@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/acroca/go-symbols" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/github.com/disintegration/imaging" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/giantswarm/go.crypto" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/go-delve/delve" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/go-sql-driver/mysql" vcs="Git" />
@@ -17,6 +18,7 @@
     <mapping directory="$PROJECT_DIR$/src/github.com/stamblerre/gocode" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/uudashr/gopkgs" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/golang.org/x/crypto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/golang.org/x/image" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/golang.org/x/lint" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/golang.org/x/tools" vcs="Git" />
   </component>

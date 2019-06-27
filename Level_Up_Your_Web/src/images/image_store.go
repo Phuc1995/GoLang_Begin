@@ -2,6 +2,7 @@ package images
 
 import (
 	"database/sql"
+	"fmt"
 	"mysql"
 	"user"
 )
@@ -37,8 +38,8 @@ func (store *DBImageStore) Save(image *Image) error {
 	`,
 		image.ID,
 		image.UserID,
-		image.Location,
 		image.Name,
+		image.Location,
 		image.Description,
 		image.Size,
 		image.CreatedAt,
@@ -68,9 +69,10 @@ func (store *DBImageStore) Find(id string) (*Image, error) {
 }
 
 func (store *DBImageStore) FindAll(offset int) ([]Image, error) {
+	fmt.Println(store)
 	rows, err := store.db.Query(
 		`
-		SELECT id, user_id, name, location, description, size, created_at
+		SELECT *
 		FROM images
 		ORDER BY created_at DESC
 		LIMIT ?
@@ -79,10 +81,12 @@ func (store *DBImageStore) FindAll(offset int) ([]Image, error) {
 		pageSize,
 		offset,
 		)
+
 	if err != nil{
 		return nil, err
 	}
-
+	fmt.Println("row: ",rows)
+	fmt.Println(err)
 	images := []Image{}
 	for rows.Next(){
 		image := Image{}
@@ -92,6 +96,7 @@ func (store *DBImageStore) FindAll(offset int) ([]Image, error) {
 			&image.Name,
 			&image.Location,
 			&image.Description,
+			&image.Size,
 			&image.CreatedAt,
 		)
 		if err != nil{
@@ -131,6 +136,7 @@ func (store *DBImageStore) FindAllByUser(user *user.User, offset int) ([]Image, 
 			&image.Name,
 			&image.Location,
 			&image.Description,
+			&image.Size,
 			&image.CreatedAt,
 		)
 		if err != nil{
@@ -139,6 +145,5 @@ func (store *DBImageStore) FindAllByUser(user *user.User, offset int) ([]Image, 
 
 		images = append(images, image)
 	}
-
 	return images, nil
 }

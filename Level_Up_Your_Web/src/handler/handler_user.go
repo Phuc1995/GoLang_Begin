@@ -3,6 +3,7 @@ package handler
 import (
 	error2 "error"
 	"github.com/julienschmidt/httprouter"
+	images2 "images"
 	"net/http"
 	s "session"
 	user2 "user"
@@ -81,4 +82,27 @@ func HandleUserUpdate(w http.ResponseWriter, r *http.Request, _ httprouter.Param
 
 	http.Redirect(w, r, "/account?flash=User+updated", http.StatusFound)
 
+}
+
+func HandleUserShow(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
+	user, err := user2.GlobalUserStore.Find(params.ByName("userID"))
+	if err != nil {
+		panic(err)
+	}
+
+	// 404
+	if user == nil {
+		http.NotFound(w, r)
+		return
+	}
+
+	images, err := images2.GlobalImageStore.FindAllByUser(user, 0)
+	if err != nil {
+		panic(err)
+	}
+
+	RenderTemplate(w, r, "users/show", map[string]interface{}{
+		"Images": images,
+		"User":   user,
+	})
 }
