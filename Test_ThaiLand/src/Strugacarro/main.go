@@ -25,7 +25,7 @@ func solution(T []int) string {
 	max := array[0]
 	var index int
 	var a string
-	
+
 	for i, value := range array{
 		if value >max {
 			max = value
