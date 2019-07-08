@@ -5,6 +5,13 @@ import (
 	"math"
 )
 
+var indexToSeason = map[int]string{
+	0: "WINTER",
+	1: "SPRING",
+	2: "SUMMER",
+	3: "AUTUMN",
+}
+
 func solution(T []int) string {
 	len := len(T)
 	n := len/4
@@ -24,28 +31,15 @@ func solution(T []int) string {
 
 	max := array[0]
 	var index int
-	var a string
-	
+
 	for i, value := range array{
 		if value >max {
 			max = value
 			index = i
 		}
 	}
-	if index == 0{
-		a := "WINTER"
-		return a
-	}else if index == 1{
-		a := "SPRING"
-		return a
-	}else if index == 2 {
-		a := "SUMMER"
-		return a
-	}else if index == 3{
-		a := "AUTUMN"
-		return a
-	}
-		return a
+	season := indexToSeason[index]
+	return season
 	}
 
 func Temperature(array []int) int {
