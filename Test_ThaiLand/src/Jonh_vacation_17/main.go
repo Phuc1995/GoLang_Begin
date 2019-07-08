@@ -155,7 +155,7 @@ func convertDayEnd(day string, month, year int) int {
 		}
 		return n
 	case 2:
-		if isLeap(year) {
+		if isLeap1(year) {
 			endDayOfMonth := Date(29, month, year).Weekday().String()
 			n := 29
 			switch endDayOfMonth {
@@ -211,7 +211,7 @@ func isLeap1(year int) bool {
 }
 
 func main() {
-	fmt.Println(countWeek(2014, "April", "May", "Wednesday"))
+	fmt.Println(countWeek(2014, "February", "April", "Wednesday"))
 
 	/*convertDayEnd("aa", 5, 2014)
 	fmt.Println("start: ", convertDayBegin("aa", 2, 2019))
