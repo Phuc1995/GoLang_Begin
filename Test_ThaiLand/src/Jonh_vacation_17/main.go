@@ -206,7 +206,7 @@ func Date(day, month, year int) time.Time {
 	return time.Date(year, time.Month(month), day, 0, 0, 0, 0, time.UTC)
 }
 
-func isLeap(year int) bool {
+func isLeap1(year int) bool {
 	return year%400 == 0 || year%4 == 0 && year%100 != 0
 }
 

@@ -35,6 +35,6 @@ func main()  {
 	s = "A B C. A B ? 1 2 3 t 5 1 !"
 	maxSentenceWords(s)
 	println("s: ",maxSentenceWords(s))
-	s1 := "We test coders. Give us a try?"
+	s1 := "Forget    CVs.. Save time . x x"
 	println("s1:",maxSentenceWords(s1))
 }
