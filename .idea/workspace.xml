@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5880e3aa-c4f8-49a0-86b4-8a0eb5e60078" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/session/session_store.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise/src/golang.org/x/net" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise/src/golang.org/x/net" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise/src/golang.org/x/net/context/go17.go" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise/src/golang.org/x/net/context/go17.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/5-html-templates/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/6-marshaling-json/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/7-unmarshaling-json/config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/7-unmarshaling-json/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/handler_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/handler_user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/middleware.go" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/middlerwaree/middleware.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/session.go" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/session/session.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/session_store.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/template.go" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/template.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Level_Up_Your_Web/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Level_Up_Your_Web/src/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_ThaiLand/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test_ThaiLand/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test_ThaiLand/src/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Test_ThaiLand/src/main.go" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/errors.go">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/middlerwaree/middleware.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/net/http/server.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="1768" selection-start-line="1768" selection-end-line="1768" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://C:/Go/src/runtime/panic.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="521" selection-start-line="521" selection-end-line="521" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/session/session.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+              <folding>
+                <element signature="e#17#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/handler_user.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <folding>
+                <element signature="e#17#98#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/julienschmidt/httprouter/router.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="333" selection-start-line="333" selection-end-line="333" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/template.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="34" column="42" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>subtractTime</find>
+      <find>animal</find>
+    </findStrings>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/Level_Up_Your_Web" />
+        <option value="file://$PROJECT_DIR$/Level_Up_Your_Web/src" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Channel/src/Begin/geet.go" />
+        <option value="$PROJECT_DIR$/Channel/src/UnidirectionalChannels/Test.go" />
+        <option value="$PROJECT_DIR$/Channel/src/select/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/AddingTimeout/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/WaitGroup/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/WorkerPool/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/WorkerPool/WaitGroup.go" />
+        <option value="$PROJECT_DIR$/Workspace/src/Test/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/Fibonacci/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/Fan-in-fan-out/main.go" />
+        <option value="$PROJECT_DIR$/Channel/src/SingleThread/main.go" />
+        <option value="$PROJECT_DIR$/OOP/src/Comosition.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/Test/Pointer.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/Test/Struct.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/Test/test.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/HTTP/ChainingHandler.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/HTTP/main.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/HTTP/HTML.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/5-html-templates/main.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/6-marshaling-json/main.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/7-unmarshaling-json/config.json" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/7-unmarshaling-json/main.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/7-unmarshaling-json/config.json.go" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/templates/template.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/session.go" />
+        <option value="$PROJECT_DIR$/Test_ThaiLand/src/James_schedule_4/main.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/Shape.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/Shape/Location.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/Shape/Shape.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/Shape/Rectangle.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/Shape/Circle.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/main.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/Shape/main.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/main.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Shape/Circle.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Shape/Rectangle.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Oders/enum.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Oders/customer.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Oders/order.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Oders/Item.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Oders/item.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Oders/orderDetail.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/main.go" />
+        <option value="$PROJECT_DIR$/Exercise/src/Oop/src/Shape/main.go" />
+        <option value="$PROJECT_DIR$/Test_ThaiLand/src/main.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/session_store.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/session/session.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/handler_user.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/main.go" />
+        <option value="$PROJECT_DIR$/Level_Up_Your_Web/src/handler/template.go" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1019" />
+    <option name="y" value="64" />
+    <option name="width" value="962" />
+    <option name="height" value="987" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GoLang_Begin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoLang_Begin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoLang_Begin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoLang_Begin" type="462c0819:PsiDirectoryNode" />
+              <item name="Level_Up_Your_Web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoLang_Begin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoLang_Begin" type="462c0819:PsiDirectoryNode" />
+              <item name="Level_Up_Your_Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Level_Up_Your_Web" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="goland.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GoLang_Begin\Level_Up_Your_Web\src\session" />
+      <recent name="D:\GoLang_Begin\Level_Up_Your_Web\src\middlerwaree" />
+      <recent name="D:\GoLang_Begin\Exercise\src\Oop\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go (5)">
+    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoLang_Begin" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Test_ThaiLand/src/James_schedule_4/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (2)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoLang_Begin" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Exercise/src/Oop/src/Shape/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (4)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoLang_Begin" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/go1/chapter4/3_layouts/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go (5)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoLang_Begin" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/Level_Up_Your_Web/src/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="GoLang_Begin" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/go1/chapter4/1_file_server/main.go" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go (5)" />
+        <item itemvalue="Go Build.go build main.go (2)" />
+        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Build.go build main.go (4)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2153518" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27555555" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.23888889" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.20111111" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27555555" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.35" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.21666667" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Workspace/src/Reflection/Ref/main.go</url>
+          <line>39</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Workspace/src/Reflection/MakingFunctipns/main.go</url>
+          <line>39</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Workspace/src/Reflection/NewStruct/main.go</url>
+          <line>28</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Workspace/src/Reflection/NewStruct/main.go</url>
+          <line>21</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Channel/src/Fibonacci/main.go</url>
+          <line>23</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Channel/src/Fibonacci/main.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Channel/src/Fibonacci/main.go</url>
+          <line>11</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/go1/chapter4/1_file_server/main.go</url>
+          <line>7</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Test_ThaiLand/src/James_schedule_4/main.go</url>
+          <line>230</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Test_ThaiLand/src/James_schedule_4/main.go</url>
+          <line>151</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/Test_ThaiLand/src/James_schedule_4/main.go</url>
+          <line>126</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GoApplicationRunConfiguration">
+        <watch expression="t1" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://C:/Go/src/builtin/builtin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="246" column="71" selection-start-line="246" selection-start-column="18" selection-end-line="246" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/templates/template.go" />
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/giantswarm/go.crypto/blowfish/block.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/giantswarm/go.crypto/blowfish/blowfish_test.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/giantswarm/go.crypto/bcrypt/bcrypt.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go1/chapter6/2_session_store/data/sessions.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go1/chapter6/2_session_store/session_store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#14#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/strings/strings.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="271" selection-start-line="271" selection-end-line="280" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Workspace/src/Reflection/main.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Go/src/time/format.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="772" column="5" selection-start-line="772" selection-start-column="5" selection-end-line="772" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/chapter3/7-unmarshaling-json/config.json" />
+    <entry file="file://$PROJECT_DIR$/go1/chapter6/2_session_store/session.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="5" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_ThaiLand/src/A_non_emty_22/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_ThaiLand/src/Count_max_word_24/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-164" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_ThaiLand/src/Jonh_vacation_17/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_ThaiLand/src/James_schedule_4/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="212" column="32" selection-start-line="212" selection-start-column="32" selection-end-line="212" selection-end-column="32" />
+          <folding>
+            <element signature="e#14#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/Shape.go" />
+    <entry file="file://$PROJECT_DIR$/Exercise/src/ExerCise3/src/Animal/Animal.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/main.go" />
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/main.go" />
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Oders/enum.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Oders/customer.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Oders/order.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Oders/orderDetail.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Oders/item.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Shape/Shape.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Shape/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/ExerCise3/src/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Shape/Location.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="12" selection-start-column="8" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Shape/Rectangle.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test_ThaiLand/src/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Exercise/src/Oop/src/Shape/Circle.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" selection-start-line="15" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/data/users.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/auth.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/user_store.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://C:/Go/src/time/time.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="660" column="38" selection-start-line="660" selection-start-column="32" selection-end-line="660" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/user.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/id.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/handle_index.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/session/session_store.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/session/session.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="31" column="15" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+          <folding>
+            <element signature="e#17#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/errors.go">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/julienschmidt/httprouter/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="333" selection-start-line="333" selection-end-line="333" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/middlerwaree/middleware.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="1768" selection-start-line="1768" selection-end-line="1768" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/handler_user.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#17#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/html/template/template.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="371" selection-start-line="371" selection-end-line="371" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Go/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="521" selection-start-line="521" selection-end-line="521" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level_Up_Your_Web/src/handler/template.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="34" column="42" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

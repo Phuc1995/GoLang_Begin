@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Exercise/src/golang.org/x/net" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Exercise/src/gopkg.in/mgo.v2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/giantswarm/go.crypto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/julienschmidt/httprouter" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Level_Up_Your_Web/src/github.com/russross/blackfriday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Level_Up_Your_Web/src/golang.org/x/crypto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/go1" vcs="Git" />
+  </component>
+</project>

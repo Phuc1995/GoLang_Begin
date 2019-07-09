@@ -43,36 +43,36 @@ var dayToint = map[string]int{
 }
 
 func Solution(year int, monthBegin, monthEnd, day string) int {
-	totalMonthBegin, dayMonthBegin := DayOfMonthBegin(year,monthBegin,day)
-	totalMonthEnd, dayMonthEnd := DayOfMonthEnd(year,monthEnd,day)
-	week := ((totalMonthEnd - totalMonthBegin)-(dayMonthBegin+dayMonthEnd))/7
+	totalMonthBegin, dayMonthBegin := DayOfMonthBegin(year, monthBegin, day)
+	totalMonthEnd, dayMonthEnd := DayOfMonthEnd(year, monthEnd, day)
+	week := ((totalMonthEnd - totalMonthBegin) - (dayMonthBegin + dayMonthEnd))/7
 	return week
 }
 
-func DayOfMonthBegin(y int, month,day string) (total, intDay int) {
-	var totalDay int
+func DayOfMonthBegin(y int, monthBegin, day string) (total, kipDayBegin int) {
+	var totalDayBegin int
 	if isLeap(y){
 		totalDayOfMonth[2] = 29
 	}
-	for i := 1; i < stringToInt[month]; i++ {
-		totalDay = totalDay + totalDayOfMonth[i]
+	for i := 1; i < stringToInt[monthBegin]; i++ {
+		totalDayBegin = totalDayBegin + totalDayOfMonth[i]
 	}
-	fmt.Println("totalDayBegin : ", totalDay)
-	intDay = totalDay % 7
-
-	intDay = (dayToint[day] + intDay)
-	if intDay <=9{
-		intDay = 9-(intDay)
+	fmt.Println("totalDayBegin : ", totalDayBegin)
+	kipDayBegin = totalDayBegin % 7
+	kipDayBegin = (dayToint[day] + kipDayBegin)
+	if kipDayBegin <=9 {
+		kipDayBegin = 9 - (kipDayBegin)
 	}else {
-		intDay = 8- (intDay -7)
+		kipDayBegin = 16 - kipDayBegin
 	}
-	fmt.Println("intDayyBegin : ", intDay)
-	return totalDay,intDay
+	fmt.Println("kipDayBegin : ", kipDayBegin)
+	return totalDayBegin, kipDayBegin
 }
 
-func DayOfMonthEnd(y int, monthEnd,day string) (total, intDay int) {
+func DayOfMonthEnd(year int, monthEnd, day string) (total, kipDayEnd int) {
 	var totalDay int
-	if isLeap(y){
+	if isLeap(year){
+		fmt.Println("Nam Nhuan")
 		totalDayOfMonth[2] = 29
 	}
 	for i := 1; i <= stringToInt[monthEnd]; i++ {
@@ -80,24 +80,23 @@ func DayOfMonthEnd(y int, monthEnd,day string) (total, intDay int) {
 
 	}
 	fmt.Println("totalDayEnd : ", totalDay)
-	intDay = totalDay % 7
-	fmt.Println("A1: ",intDay)
-	intDay = dayToint[day] + intDay
-	if intDay >= 8 {
-		intDay = intDay -8
+	kipDayEnd = totalDay % 7
+	kipDayEnd = dayToint[day] + kipDayEnd
+	if kipDayEnd > 8 {
+		kipDayEnd = kipDayEnd -8
 	}else {
-		intDay = intDay -2
+		kipDayEnd = kipDayEnd -2
 	}
-	fmt.Println("intDayyEnd : ", intDay)
-	return totalDay,intDay
+	fmt.Println("kipDayEnd : ", kipDayEnd)
+	return totalDay, kipDayEnd
 }
 
 func isLeap(year int) bool {
-	fmt.Println("Nam Nhuan")
-	return year%400 == 0 || year%4 == 0 && year%100 != 0
+
+	return year % 400 == 0 || year % 4 == 0 && year % 100 != 0
 }
 
 func main() {
-	fmt.Println("Solution: ",Solution(2015, "February", "April", "Thursday"))
+	fmt.Println("Solution: ",Solution(2014, "September", "May", "Wednesday"))
 
 }

@@ -13,6 +13,7 @@ var indexToSeason = map[int]string{
 }
 
 func solution(T []int) string {
+
 	len := len(T)
 	n := len/4
 	array := []int{}
